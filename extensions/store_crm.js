@@ -177,7 +177,7 @@ obj['softauth'] = "order"; // [OPTIONAL]. if user is logged in, this gets ignore
 						}
 					}
 				else	{
-					$parent.append("There are no FAQ at this time.");
+					//$parent.append("There are no FAQ at this time.");
 					}
 				
 				}
