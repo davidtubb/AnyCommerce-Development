@@ -91,35 +91,41 @@ app.u.loadScript(app.vars.baseURL+"_init.js");
 <!-- VIEW CONTENT -->
 <!-- leave the appView div, put your your html here ...  -->
 <div id="container">
-    <div id="topNav">
-      <div id="topNavContent"> <img src="images/account-icon.png" alt=""> <span class="fl"><span class="loginShow username" onClick="return showContent('customer',{'show':'myaccount'});" ></span> <span class="loginShow"> <a href="#" onClick="app.ext.myRIA.u.handleLogoutActions(); return false;">Log Out</a></span> <span class="loginHide"><a href="#" onClick="return showContent('customer',{'show':'myaccount'});">Login </a><span>or</span> <a href="#customer?show=createaccount" class='bindByAnchor' id="account">Sign-Up</a></span> </span><p><a href="#" onClick="return showContent('cart',{});">VIEW CART</a></p>
-        <p><a href="#" onClick="return showContent('company',{'show':'contact'});">My Account</a></p>
-        <p><a href="#" onClick="return showContent('company',{'show':'faq'});">Help</a></p>
-      </div>
-    </div>
-    <div id="header">
-      <div id="headerContent">
-        <div class="headert1"><img src="images/main_logo.png" alt="Toy Wars" title="Toy Wars" onClick="return showContent('category',{'navcat' : '.'});"></div>
-        <div class="headert2">
-          <form id='headerSearchFrm' name='headerSearchFrm' action='#' class='productSearchForm' method="get">
-            <input type='search' name='KEYWORDS' id='txtSearch' value="Find it here..." class="productSearchKeyword handleDefault" />
-            <input id="btnTopNavSearch" type="image" src="images/nav-search.png" value=""/>
-          </form>
+    <div class="header">
+        	<div class="headertop">
+            	<div class="headertopL"><a href="#."><img src="images/logo.gif" alt="David Tubb" border="0" title="David Tubb" /></a></div>
+                <div class="headertopR">
+                	<div class="topmenu">
+                    	<ul>     
+                        	<li><a href="#.">Login</a></li>
+                            <li><span>|</span></li>
+                            <li><a href="#.">My Account</a></li>
+                            <li><span>|</span></li>
+                            <li><a href="#.">View Cart</a></li>
+                            <li><span>|</span></li>
+                            <li><a href="#.">Help</a></li>
+                        </ul>
+                    </div>
+                    <div class="search">
+                    	<form action="" method="get">
+                        	<input class="searchin" />
+                            <input type="image" src="images/search.gif" class="searchbut" alt="Search" title="Search" />
+                        </form>
+                    </div> 
+                </div>
+            </div>
+             <div class="nav">
+                <ul>     
+                    <li style="padding:4px 0 0 45px;"><a href="#." onClick="return showContent('category',{'navcat' : '.'});">Products</a></li>
+                    <li><a href="#." onClick="return showContent('company',{'show':'article'});">Articles</a></li>
+                    <li><a href="#." onClick="return showContent('',{KEYWORDS: 'videos'});">Videos</a></li>
+                    <li><a href="#." onClick="return showContent('company',{'show':'about'});">About David Tubb</a></li>
+                    <li><a href="#." onClick="return showContent('company',{'show':'product_info'});">Product Documentation</a></li>
+                    <li><a href="#." onClick="return showContent('company',{'show':'faq'});">FAQ</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="nav">
-      <div class="navContent">
-        <ul>
-          <li><a href="#" id="megaanchor" onClick="return showContent('category',{'navcat' : '.'});">Products</a></li>
-          <li><a href="#" id="megaanchor1" onClick="return showContent('company',{'show':'article'});;">Articles</a></li>
-          <li><a href="#" id="megaanchor2" onClick="return showContent('search',{KEYWORDS: 'statue'});">videos</a></li>
-          <li><a href="#" id="megaanchor3" onClick="return showContent('company',{'show':'about'});">About David Tubb</a></li>
-          <li><a href="#" id="megaanchor4" onClick="return showContent('search',{KEYWORDS: 'prop replicas'});">Product Documentation</a></li>
-          <li><a href="#" id="megaanchor5" onClick="return showContent('company',{'show':'faq'});">FAQ</a></li>
-        </ul>
-      </div>
-    </div>
+  
     <div id='globalMessaging' class='appMessaging'></div>
     <!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
     <!-- These add specific functionality for the app. In most cases, you want to leave them alone. -->
@@ -133,43 +139,43 @@ app.u.loadScript(app.vars.baseURL+"_init.js");
     <!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
     <!-- ... your html ends -->
     <!-- /VIEW CONTENT -->
-    <div id="footer">
-      <div id="footerContent">
-        <div id="footerLinks">
-          <ul>
-            <li>NEED HELP?</li>
-            <li><a href="#" onClick="return showContent('category',{'navcat' : '.'});">Home</a></li>
-            <li><a href="#" onClick="return showContent('company',{'show':'about'});">About</a></li>
-            <li><a href="#" onClick="return showContent('company',{'show':'contact'});">Contact</a></li>
-            <li><a href="#">Policies</a></li>
-            <li><a href="#" onClick="return showContent('company',{'show':'faq'});">FAQs</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-          <ul>
-            <li>FIND IT HERE</li>
-            <li><a href="#" onClick="return showContent('search',{KEYWORDS : 'All Categories'});">All Categories</a></li>
-            <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'whats hot'});">What's Hot</a></li>
-            <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'new arrivals'});">New Arrivals</a></li>
-            <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'item type'});">Item Type</a></li>
-            <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'by manufacturer'});">By Manufacturer</a></li>
-            <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'clearance items'});">Clearance Items</a></li>
-          </ul>
-          <ul>
-            <li>MY ACCOUNT</li>
-            <li><a href="#" onClick="return showContent('customer',{'show' : 'myaccount'});">Log-in or Sign-Up</a></li>
-            <li><a href="#" onClick="return showContent('customer',{'show' : 'myaccount'});">View My Account</a></li>
-            <li><a href="#" onClick="return showContent('cart',{});">View Shopping Cart</a></li>
-            <li><a href="#" onClick="return showContent('cart',{});">Checkout</a></li>
-            <li><a href="#">Recently Viewed Items</a></li>
-            <li><a href="#customer?show=orders">Previous Orders</a></li>
-          </ul>
-          </div>
-        <div id="copyright">
-          <p>Copyright 2012. Please read our <a href="#" onClick="return showContent('company',{'show':'privacy'});" style="color:#FFFFFF;">Privacy Statement</a>. eCommerce Engine by <a href="http://www.zoovy.com">Zoovy</a></p>
-        </div>
-      </div>
     </div>
-  </div>
+    <div class="footer">
+	<div class="footermid">
+    	<div class="footertop">
+        	<ul style="margin:23px 0 0 65px;">
+            	<h1>CUSTOMER SERVICE</h1>
+            	<li><a href="#.">Frequently Asked Questions</a></li>
+                <li><a href="#.">Return Policy</a></li>
+                <li><a href="#.">Sitemap</a></li>
+             </ul>
+             <ul>
+            	<h1>CONTACT US</h1>
+            	<li><a href="#.">Contact Us</a></li>
+                <li><a href="#.">Customer Feedback</a></li>
+              </ul>
+              <ul>
+            	<h1>MY ACCOUNT</h1>
+            	<li><a href="#.">Log In</a></li>
+                <li><a href="#.">Manage Your Account</a></li>
+                <li><a href="#.">Gift Certificates</a></li>
+             </ul>
+             <ul>
+            	<h1>ABOUT US</h1>
+             	<li><a href="#.">Privacy & Security</a></li>
+                <li><a href="#.">Terms & Conditions</a></li>
+                <li><a href="#.">Legal Information</a></li>
+                <li><a href="#.">Email Sign Up</a></li>
+             </ul>
+        </div>
+        <div class="footerbot">
+        	<div class="mcafee"><img src="images/mcafee.gif" alt="" /></div>
+            <div class="copyright">&copy; Copyright Superior Shooting Systems, Inc.2013</div>
+            <div class="powerimg"><img src="images/poweredby.gif" alt="" /></div>
+        </div>
+    </div>
+</div>
+  
 
 	<!--
 	** REMINDER : DO NOT PUT ANY GRAPHICS/CONTENT THAT SHOULD NOT APPEAR ON EVERY PAGE IN THE VIEW (HERE)
@@ -657,6 +663,121 @@ Some of David Tubb's Achievements and Recognition
 </div>
        </div>
 		</div>
+   <div id='product_infoArticle' class='displayNone textContentArea'>
+   <h1>Product Information</h1>
+   <div class="pd16 fs13">
+		
+	
+		<div id="product_info_txt">
+			For those who prefer to do their reading off-line, this page contains all product information and instruction downloads contained in the specific products pages elsewhere on this site. You will need Adobe Acrobat to view and print these downloads.<br>
+		</div>
+		<div id="clicktojump">
+			<div id="clicktojump_text">Click a link to jump to a section</div>
+			<div id="clicktojump_links_cont">
+				<div class="clicktojump_links"><a onclick="goToByScroll('dtac','slow')" class="clicktojump_a" href="javascript:;"><img src="images/dtac_logo_100.jpg"></a></div>
+				<div class="clicktojump_links"><a onclick="goToByScroll('sss','slow')" class="clicktojump_a" href="javascript:;"><img src="images/sss_text_logo100.jpg"></a></div>
+				<div class="clicktojump_links"><a onclick="goToByScroll('ff','slow')" class="clicktojump_a" href="javascript:;"><img src="images/fflogo100.gif"></a></div>
+				<div class="clicktojump_links"><a onclick="goToByScroll('sls','slow')" class="clicktojump_a" href="javascript:;"><img src="images/sl_logo_red100.jpg"></a></div>
+				<div class="clicktojump_links"><a onclick="goToByScroll('ar','slow')" class="clicktojump_a" href="javascript:;"><img src="images/ar_page_logo100.jpg"></a></div>
+				<div class="clicktojump_links"><a onclick="goToByScroll('t2k','slow')" class="clicktojump_a" href="javascript:;"><img src="images/2000_logo_100.jpg"></a></div>
+			</div>
+		</div>
+		<br><br><br><br><br><br>
+		<div id="dtac" class="pdf_container">
+			<div class="pdf_list_header"><img src="images/dtac_logo_100.jpg"><div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div></div>
+			<div class="pdf_list_header2"></div>
+			<br>
+			<ul class="pdf_list">
+			<li><a target="_blank" href="pdfs/bn_coating_information.pdf">Boron Nitride Bullet Coating Information<br><img src="images/bn_coating_sheet_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/dtac_loaded_ammo.pdf">DTAC Precision Loaded Ammunition<br><img src="images/dtac_loaded_ammo_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/117_information.pdf">DTAC 115-grain 6mm Match Bullet<br><img src="images/115_lake_two200.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/norma_release.pdf">6XC Brass from NORMA &amp; DTAC<br><img src="images/norma_release_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/reticle_rev6.pdf">DTAC Scope Reticle MANUAL<br><img src="images/reticle_rev6_110.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/dtac_reticle_sheet.pdf">DTAC Scope Reticle INFORMATION<br><img src="images/dtac_reticle_sheet_150.jpg"></a></li>
+			</ul>
+			<div class="cb"></div>
+		</div>
+		
+		
+		<div id="sss" class="pdf_container">
+			<div class="pdf_list_header"><img src="images/sss_text_logo100.jpg"><div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div></div>
+			<div class="pdf_list_header2"></div>
+			<br>
+			<ul class="pdf_list">
+			<li><a target="_blank" href="pdfs/T2K_front_sight.pdf">T2K Match Rifle Front Sight<br><img src="images/T2K_front_sheet_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/AR15_front_sight.pdf">AR15 Match Rifle Front Sight<br><img src="images/AR15_front_sight_sheet_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/LR_front_sight.pdf">Long Range Match Front Sight<br><img src="images/LR_front_sight_sheet_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/tubeins.pdf">SightLine Extension Tube<br><img src="images/tubeins_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/6XC_die_instructions_2012.pdf">6XC Dies &amp; Data (Updated 2/12)<br><img src="images/6xc_die_set_2012_thmb.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/extractor.pdf">Tubb SAKO-style Extractors<br><img src="images/excover100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/SSS_HP_700_bolt.pdf">Remington 700 High-Performance Bolt<br><img src="images/SSS_HP_700_bolt_150.jpg"></a></li>
+			</ul>
+			<div class="cb"></div>
+		</div>
+		<div id="ff" class="pdf_container">
+			<div class="pdf_list_header"><img src="images/fflogo100.gif"><div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div></div>
+			<div class="pdf_list_header2"></div>
+			<br>
+			<ul class="pdf_list">
+			<li><a target="_blank" href="pdfs/ffinstructions.pdf">FinalFinish System label instructions<br><img src="images/ff_instructions100.gif"></a></li>
+			<li><a target="_blank" href="pdfs/finalfinish_faqs_sheet.pdf">FinalFinish System information &amp; Q&amp;A<br><img src="images/finalfinish_faqs_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/ff_brochure.pdf">FinalFinish System product brochure<br><img src="images/ff_brochure_cover.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/handlapped.pdf">FinalFinish System handlapped procedure<br><img src="images/ff_handlapped.gif"></a></li>
+			<li><a target="_blank" href="pdfs/break_in_kit_instructions.pdf">Break-In Kit instructions<br><img src="images/break_in_kit_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/ff22brochure.pdf">FinalFinish System .22 rimfire brochure <br><img src="images/ff_22brochure100.gif"></a></li>
+			<li><a target="_blank" href="pdfs/tms.pdf">FinalFinish System TMS product brochure<br><img src="images/ff_tms100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/ff_loaded_instructions.pdf">FinalFinish Loaded Ammo<br><img src="images/ff_loaded_instructions_150.jpg"></a></li>
+			</ul>
+			<div class="cb"></div>
+		</div>
+		<div id="sls" class="pdf_container">
+			<div class="pdf_list_header"><img src="images/sl_logo_red100.jpg"><div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div></div>
+			<div class="pdf_list_header2"></div>
+			<br>
+			<ul class="pdf_list">
+			<li><a target="_blank" href="/pdfs/pins.pdf">SpeedLock Systems firing pin brochure<br><img src="images/pinsfront100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/cpbrochure.pdf">SpeedLock M70 Cocking Piece brochure<br><img src="images/cpbro100.jpg"></a></li>
+			<li><a target="_blank" href="/pdfs/cpins3.pdf">SpeedLock M70 Cocking Piece Instructions<br><img src="images/cpinst100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/cs_springs.pdf">Chrome Silicon Springs brochure<br><img src="images/springs_bro_100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/cs_springs.pdf">CS springs article: engineering<br><img src="images/springart100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/complete_striker_sheet.pdf">Remington 700 Complete Striker Assembly<br><img src="images/complete_striker_150.jpg"></a></li>
+			</ul>
+			<div class="cb"></div>
+		</div>
+		
+		<div id="ar" class="pdf_container">
+			<div class="pdf_list_header"><img src="images/ar_page_logo100.jpg"><div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div></div>
+			<div class="pdf_list_header2"></div>
+			<br>
+			<ul class="pdf_list">
+			<li><a target="_blank" href="pdfs/cwsbroc.pdf">CWS carrier weight system<br><img src="images/cws100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/newgrip.pdf">Competition Grip <br><img src="images/grip_brochure100.jpg"></a></li>
+			<li><a target="_blank" href="/pdfs/arspgs2.pdf">Trigger / Hammer Springs<br><img src="images/ar_trg100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/nm_springs.pdf">National Match Trigger Instructions<br><img src="images/nmins100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/arsprings.pdf">SpeedLock Systems AR15 Buffer Spring<br><img src="images/arspringpic200.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/cs_flatwire_brochure.pdf">SpeedLock Systems AR15 Flatwire Buffer Spring<br><img src="images/cs_flatwire_brochure_200.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/AR15_buttplate.pdf">SSS Inc. AR15 4-Way Buttplate<br><img src="images/AR15_buttplate_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/magazine_springs.pdf">SpeedLock Systems AR15 Magazine Springs<br><img src="images/magazine_springs_100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/sr25_mag_springs.pdf">SpeedLock Systems SR25 Magazine Springs<br><img src="images/sr25_mag_springs_100.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/cs_ext_ejc_brochure.pdf">Extractor / Ejector Springs<br><img src="images/cs_ext_ejc_brochure_100.jpg"></a></li>
+			</ul>
+			<div class="cb"></div>
+		</div>
+		
+		<div id="t2k" class="pdf_container">
+			<div class="pdf_list_header"><img src="images/2000_logo_100.jpg"><div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div></div>
+			<div class="pdf_list_header2"></div>
+			<br>
+			<ul class="pdf_list">
+			<li><a target="_blank" href="pdfs/spec_tac_lr.pdf"><img src="images/spec_tac_sheet_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/2000_manual.pdf"><img src="images/t2kcover135.jpg"></a></li>
+		    <li><a target="_blank" href="pdfs/T2K_trigger_post.pdf"><img src="images/T2K_trigger_post_150.jpg"></a></li>
+			<li><a target="_blank" href="pdfs/T2K_brake_sheet.pdf"><img src="images/T2K_brake_sheet_150.jpg"></a></li>
+			</ul>
+			<div class="cb"></div>
+		</div>
+	</div>
+   </div>
      		<div id='articleArticle' class='displayNone textContentArea'>
 			<h1>Article</h1>
             <div class="pd16">
