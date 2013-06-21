@@ -93,7 +93,7 @@ app.u.loadScript(app.vars.baseURL+"_init.js");
 <div id="container">
     <div class="header">
         	<div class="headertop">
-            	<div class="headertopL"><a href="#."><img src="images/logo.gif" alt="David Tubb" border="0" title="David Tubb" /></a></div>
+            	<div class="headertopL"><a href="#" onClick="return showContent('category',{'navcat' : '.'});"><img src="images/logo.gif" alt="David Tubb" border="0" title="David Tubb" /></a></div>
                 <div class="headertopR">
                 	<div class="topmenu">
                     	<ul>     
@@ -107,8 +107,8 @@ app.u.loadScript(app.vars.baseURL+"_init.js");
                         </ul>
                     </div>
                     <div class="search">
-                    	<form action="" method="get">
-                        	<input class="searchin" />
+                    	<form id='headerSearchFrm' name='headerSearchFrm' action='#' class='productSearchForm' method="get">
+                        	<input type='search' name='KEYWORDS' id='txtSearch' class="productSearchKeyword handleDefault"/>
                             <input type="image" src="images/search.gif" class="searchbut" alt="Search" title="Search" />
                         </form>
                     </div> 
@@ -237,13 +237,47 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 -->
 <div id='homepageTemplate' class='homeTemplate'>
 	
-
-
-	
+<div class="middle">
+      		<div class="banner"><img src="images/banner.jpg" alt=""/></div>
+            <div class="riflesbox"><a href="#" onClick="return showContent('category',{'navcat' : '.tubb2000andspectaclrriflesandaccessories'});"><img src="images/riflespic1.jpg" alt="" class="riflespic" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.tubbar15accuracyandreliabilityparts'});"><img src="images/riflespic2.jpg" alt="" class="riflespic" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.accuracyparts'});"><img src="images/riflespic3.jpg" alt="" class="riflespic" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.'});"><img src="images/riflespic4.jpg" alt="" class="riflespic" /></a></div>
+            
+            <div class="featuredpro">
+            	<div class="featuredtitle">
+                	FEATURED PRODUCTS
+                </div>
+                <!--<div class="feaprodetbox">
+                	<img src="images/dvd_pic1.jpg" />
+                    <p><a href="#.">DVD "Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb"</a></p>
+                    <h1>Price: $29.95</h1>
+                </div>
+                
+                 <div class="feaprodetbox">
+                	<img src="images/dvd_pic2.jpg" />
+                    <p><a href="#.">Tubb Precision AR-15 CS Spring Performance Pack</a></p>
+                    <h1>Price: $57.95</h1>
+                </div>
+                
+                 <div class="feaprodetbox">
+                	<img src="images/dvd_pic1.jpg" />
+                    <p><a href="#.">DVD "Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb"</a></p>
+                    <h1>Price: $29.95</h1>
+                </div>
+                
+                 <div class="feaprodetbox">
+                	<img src="images/dvd_pic1.jpg" />
+                    <p><a href="#.">DVD "Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb"</a></p>
+                    <h1>Price: $29.95</h1>
+                </div>-->
+                     <ul data-bind="var: category(@products); format: productList; size:4 editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; before:; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+	<p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
+             </div>
+            
+            <div class="tabimg"><img src="images/tab_img.jpg" /></div>  
+      </div>
 	<!--<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>-->
 
-	<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; before:<h2>Featured Items</h2>; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-	<p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
+	<!--<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; before:<h2>Featured Items</h2>; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+	<p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>-->
 
 <!-- a sample of how to format an elastic native search in a data-bind -->
 	<!--<ul id='homeProdSearchBestSellers' data-bind='var: elastic-native({"size":"4","mode":"elastic-native","filter":{"term":{"tags":"IS_BESTSELLER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
@@ -252,8 +286,6 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 
 <!-- a sample of how to get a 'list' src onto the page. -->
 	<ul data-bind="var: list($models.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-
-
 </div>
 
 
