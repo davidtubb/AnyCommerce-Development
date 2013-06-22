@@ -67,6 +67,35 @@ app.rq.push(['script',0,(document.location.protocol == 'https:' ? 'https:' : 'ht
 This function is overwritten once the controller is instantiated. 
 Having a placeholder allows us to always reference the same messaging function, but not impede load time with a bulky error function.
 */
+
+app.rq.push(['script',1,app.vars.baseURL+'cycle-2.9999.81.js']);//','validator':function(){return (jQuery().cycle) ? true : false;}});
+
+app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
+		var $target=$('#wideSlideshow');
+		if(!$target.hasClass('slideshowSet')){ //target doesn't already have slideshow
+			$target.addClass('slideshowSet').cycle({fx:'fade',speed:'slow',timeout:5000,pager:'#slideshowNav'});	
+			}
+		$('#slideshowNav a').click( function(e){
+            $('#wideSlideshow').cycle('pause');
+            $('#folio-play').show();
+            $('#folio-pause').hide();
+        });
+ 
+        $('#folio-play').hide();
+ 
+        $('#folio-play').click( function(e){
+            $('#wideSlideshow').cycle('resume');
+            $('#folio-play').hide();
+            $('#folio-pause').show();
+        });
+ 
+        $('#folio-pause').click( function(e){
+            $('#wideSlideshow').cycle('pause');
+            $('#folio-play').show();
+            $('#folio-pause').hide();
+        });	
+		}]);
+
 app.u.throwMessage = function(m)	{
 	alert(m); 
 	}

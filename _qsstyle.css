@@ -2,8 +2,7 @@ body,html	{font-size:100%;}
 
 #appTemplates {display:none;} /* container for all templates. should be hidden */
 
-#appPreView	{width:550px; margin:0 auto;}
-
+ 
 
 /*
 loading class. add class to your templates if you want a loading graphic to appear while data is requested. add only to the parent element. 
@@ -537,63 +536,6 @@ CHECKOUT
 
 /***added by vilas ***/
 
-div#container{margin:0px auto; position:relative; max-width:1020px;}
-div#container div#topNav{background: url(images/background-top-nav.png) repeat-x; height: 30px; position: relative; width: 100%;}
-div#container div#topNav div#topNavContent{color: #000; font-family: Helvetica; height: 30px; margin: 0px auto; position: relative; max-width: 960px;}
-div#container div#topNav div#topNavContent img, div#container div#topNav div#topNavContent p{float:left; position: relative;}
-div#container div#topNav div#topNavContent img{margin-top: 7px; padding-right: 11px;}
-div#container div#topNav div#topNavContent img:first-child{margin-left: 12px;}
-div#container div#topNav div#topNavContent p{color: #FFFFFF; font-family: Helvetica; font-size: 12px; margin-top: 8px;}
-div#container div#topNav div#topNavContent p:not(:last-child){padding-right: 51px;}
-div#container div#topNav div#topNavContent p a{color: #000;}
-div#container div#header{background:#f9f6f1; height: 124px; position: relative; width: 100%;}
-div#container div#header div#headerContent{height: 124px; margin: 0px auto; position: relative; max-width: 960px;}
-div#container div#header div#headerContent img#logo{cursor: pointer; left: 10px; position: relative; top: 11px;}
-div#container div#header div#headerContent input#txtSearch{color: #999999;
-    font-size: 14px;
-    height: 28px;
-    padding: 0 10px;
-    width: 253px;}
-#btnTopNavSearch{cursor: pointer; position: absolute;  width: 35px; /*height: 33px; left: 617px; top: 47px; */ }
-div#container div#header div#headerContent div#headerFreeShipping{background: url(images/header-free-shipping.png); height: 54px; /*left: 730px; position: absolute;*/ width: 220px; top: 20px;}
-div#container div#header div#headerContent div#headerFreeShipping img{left: -20px; position: relative; top: -10px;}
-div#container div#header div#headerContent a#btnSocialFacebook{cursor: pointer; left: 10px; position: relative; top: 21px;}
-div#container div#header div#headerContent a#btnSocialTwitter{cursor: pointer; left: 20px; position: relative; top: 21px;}
-div#container div#header div#headerContent a#btnSocialYoutube{cursor: pointer; left: 30px; position: relative; top: 21px;}				
-div#container div#header div#headerContent a#btnSocialMail{cursor: pointer; left: 40px; position: relative; top: 21px;}
-div#container div#footer{background: url(images/background-footer.png); height: 358px; width: 100%;}
-div#container div#footer div#footerContent{height: 358px; margin: 0px auto; max-width: 960px;}
-div#container div#footer div#footerContent div#footerLinks{height: 290px; max-width: 960px;}	
-div#container div#footer div#footerContent div#footerLinks > ul{float: left; padding-right: 52px; margin-top:60px; width: 150px;}
-div#container div#footer div#footerContent div#footerLinks > ul li{color: #FFFFFF; font-size: 14px; list-style: none;}		
-div#container div#footer div#footerContent div#footerLinks > ul li:not(:first-child){padding-top:8px;}			
-div#container div#footer div#footerContent div#footerLinks > ul li a{color: #FFFFFF; text-decoration: none;}
-div#container div#footer div#footerContent div#footerLinks > ul li a:hover{text-decoration: underline;}
-div#container div#footer div#footerContent div#footerLinks > ul li:first-child, div#container div#footer div#footerContent div#footerSubscribe table tr td:first-child
-{color: #666666; font-family:'Conv_BebasNeue',Sans-Serif; font-size: 30px;}
-div#container div#footer div#footerContent div#footerLinks div#footerSubscribe{float: left; position: relative; top:60px;}						
-div#container div#footer div#footerContent div#footerLinks div#footerSubscribe table{}					
-div#container div#footer div#footerContent div#footerLinks div#footerSubscribe table tr td{}
-div#container div#footer div#footerContent div#footerLinks div#footerSubscribe table tr:not(:first-child) td{padding-top:6px;}						
-div#container div#footer div#footerContent div#footerLinks div#footerSubscribe table tr td input{height:35px; width:177px; padding:0 10px; color:#999999;}
-div#container div#footer div#footerContent div#footerLinks div#footerSubscribe table tr td img#btnFooterSubscribe{cursor: pointer; margin:4px 0 0;}
-div#container div#footer div#footerContent div#footerLinks div#footerSubscribe .appMessage{left:1px; opacity: 1; position: absolute; top: 9px; width: 312px; z-index: 1000;}
-div#container div#footer div#footerContent div#footerLinks div#footerSubscribe .appMessage button.stdMargin{left: 280px; position: absolute; top: 10px; z-index: 1001;}							
-div#container div#footer div#footerContent div#copyright{color: #FFFFFF; max-width: 960px;}
-div#container div#footer div#footerContent div#copyright p{font-family: Helvetica; font-size: 12px; margin-top: 27px; text-align: center;}
-div#container div#footer div#footerContent div#copyright p a{font-weight: bold; text-decoration: none;}					
-div#container div#footer div#footerContent div#copyright p a:hover{text-decoration: underline;}					
-div#container div#footer div#footerContent div#copyright p a:visited{color: #FFFFFF;}							
-div#container div#footer div#footerContent div#copyright{height: 68px; max-width: 960px;}
-div#container div.nav{position: relative; width: 100%; -moz-box-shadow:1px 1px 5px 1px #222222; -webkit-box-shadow: 1px 1px 5px 1px #222222; box-shadow:1px 1px 5px 1px #222222; float:left;}
-div#container div.nav div.navContent{height:50px; margin:0px auto; position: relative; max-width: 960px;}
-div#container div.nav div.navContent > ul{height: 50px; margin: 0px auto; max-width: 850px; padding:0px;}
-div#container div.nav div.navContent > ul > li{float: left; height: 50px; list-style: none; overflow: show; padding-left: 20px; padding-right: 20px; line-height:16px;}				
-div#container div.nav div.navContent > ul > li > a{color:#FFFFFF; font-family:'Conv_BebasNeue'; font-size:16px; position:relative; text-decoration: none; top: 5px; font-weight:bold;}
-.no-fontface div#container div.nav div.navContent > ul > li > a{font-family: Arial, Helvetica, sans-serif; font-size: 14px;}
-div#container div.nav div.navContent > ul > li > a:hover{}
-.headert1{margin:11px 0 0 10px; padding:0px; cursor:pointer;}
-.headert2{float: right; margin: 0 0 0 156px; padding: 0;}
 .loginShow a{ color:#fff;}
 #loginFormForModal{ background:#b7a58b;}
 .loginShow {display:none;}
@@ -603,7 +545,6 @@ div#container div.nav div.navContent > ul > li > a:hover{}
 .buyerLoggedIn .loginHide {display:none;}
 
 .hideIfLoggedIn{display:block;}
-.fl{float:left;font-size: 12px;padding: 8px 50px 0 0;}
 .fs13 {
     font-size: 13px;
 }
@@ -714,12 +655,24 @@ box-shadow:0 0 10px #AAA;
     text-decoration: none;
 }
 .pdf_list li:hover{ border:1px solid #ccc; border-radius:3px; box-shadow: 0 0 3px #6d5343;}
+
+/*NEW DROP DWON MENU CSS*/
+.megamenu{position:absolute; display:none; background:#4a4a49; padding:10px; font:normal 12px Verdana; z-index:100; width:960px; font-family:Arial, Helvetica, sans-serif;
+ /* box-shadow:1px 1px 1px 1px #333;*/ border-bottom-left-radius:15px; border-bottom-right-radius:15px; border-bottom:2px #333 solid; border-left:#333 2px solid; 
+  border-right:#333 2px solid;}
+.megamenu ul{margin:0; padding:0 30px 0 30px; float:left; border-right:1px solid #333;}
+.megamenu ul li{margin:0px; padding:5px 0 2px 0; list-style-type:none; text-transform:uppercase; font-size:11px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
+.megamenu ul li a{color:#BBBBBB; padding:2px 7px; display:block;}
+.megamenu ul li a:hover{color:#FFFFFF; background:#333; padding:2px 7px; display:block;}
+/*NEW DROP DWON MENU CSS*/
+
 /**** end vilas stylesheet ***/
 
 /****New style sheet ***/
 body{margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#808080; font-weight:normal;  background:url(images/body_bg.gif) repeat-x #f9f6f1;}
 a{text-decoration:none;}
 a:hover{text-decoration:none;}
+img{max-width:100%;}
 .fl{float:left;}
 .fr{float:right;}
 .cb{clear:both;}
@@ -733,13 +686,15 @@ a:hover{text-decoration:none;}
          url('font/MyriadPro-Regular/myriadpro-regular.svg#MyriadProRegular') format('svg');
 }
 
-.wrapper{margin:0 auto; padding:0px; width:1000px;}
+.wrapper{margin:0 auto; padding:0px; max-width:1000px;}
 
 /*Header Start*/
-.header{margin:11px 0 0 0; padding:0px; width:1000px; float:left;}
-.headertop{margin:0px; padding:0px; width:1000px; float:left;}
-.headertopL{margin:0px; padding:0px; width:318px; float:left;}
-.headertopR{margin:0px; padding:0px; width:346px; float:right;}
+.header{margin:11px 0 0 0; padding:0px; max-width:1000px; float:left;}
+.headertop{margin:0px; padding:0px; max-width:1000px; width:100%; float:left;}
+.headertopL{margin:0px; padding:0px; max-width:318px; float:left;}
+.headertopL img{width:100%;}
+
+.headertopR{margin:0px; padding:0px; max-width:346px; float:right;}
 .topmenu{margin:14px 0 0 0; padding:0px; font-size:13px; font-weight:bold;}
 .topmenu ul{margin:0px; padding:0px; float:right;}
 .topmenu ul li{margin:0px; padding:0px; list-style-type:none; float:left;}
@@ -747,43 +702,151 @@ a:hover{text-decoration:none;}
 .topmenu ul li a:hover{color:#000;}
 .topmenu ul li span{margin:0px; padding:0 12px;}
 .search{margin:46px 0 0 0; padding:0px; float:left;}
-.productSearchKeyword{margin:0px; padding:4px 10px; border:1px solid #979797; font-size:12px; width:230px; float:left;}
+.searchin{margin:0px; padding:4px 10px; border:1px solid #979797; font-size:12px; width:230px; float:left;}
 .searchbut{margin:1px 0 0 6px; padding:0px; float:left;}
 
-.nav{margin:0px; padding:0px; width:1000px; float:left; font-family:'Aldrich', serif; font-size:16px; background:url(images/nav_bg.gif) repeat-x; height:28px;}
+.nav{margin:0px; padding:0px; max-width:1000px; width:100%; float:left; font-family:'Aldrich', serif; font-size:16px; background:url(images/nav_bg.gif) repeat-x; height:28px;}
 .nav ul{margin:0px; padding:0px;}
 .nav ul li{margin:0px; padding:4px 0 0 67px; list-style-type:none; float:left;}
 .nav ul li a{color:#ffffff;}
 .nav ul li a:hover{color:#272626;}
+
+.header select{background:url("images/navselect.gif") no-repeat scroll right center #FFFFFF; border:medium none; display:block; font:12px Arial,Helvetica,sans-serif; margin:0;
+max-width:100%; outline:medium none; overflow:hidden; padding:10px; width:100%; border:1px solid #a09990; background:#eedcc1;}
+#responsive-menu{display:none; float:left;}
 /*Header Close*/
 
 /*Middle Start*/
-.middle{margin:0px; padding:0px; width:1000px; float:left;}
+.middle{margin:0px; padding:0px; max-width:1000px; float:left;}
 .banner{margin:6px 0 0 0; padding:0px; float:left;}
-.riflesbox{margin:15px 0 0 0; padding:0px; background:#eedcc1; width:1000px; float:left; height:134px;}
-.riflespic{margin:10px 0 0 13px; padding:0px;}
+.banner img{width:100%;}
 
-.featuredpro{margin:25px 0 0 0; padding:0px; width:1000px; float:left;}
-.featuredtitle{margin:0px; padding:15px 0 0 0; width:190px; height:162px; background:#a42924; font-family:'Aldrich', serif; font-size:28px; color:#FFFFFF; text-align:center; float:left;}
+.riflesbox{margin:15px 0 0 0; padding:0px; background:#eedcc1; max-width:1000px; width:100%; float:left; min-height:134px;}
+.riflespic{margin:10px 0 0 13px; padding:0px;}
+.riflesbox img{border:1px solid #000000 !important;}
+
+.featuredpro{margin:25px 0 0 0; padding:0px; max-width:1000px; width:100%; float:left;}
+.featuredtitle{margin:0px; padding:15px 0 0 0; max-width:190px; height:162px; background:#a42924; font-family:'Aldrich', serif; font-size:28px; color:#FFFFFF; text-align:center; float:left;}
 .feaprodetbox{margin:0 0 0 35px; padding:0px; width:164px; float:left; font-family: 'MyriadProRegular';}
 .feaprodetbox p{margin:7px 0 0 0; padding:0px; font-size:12px; text-align:center;}
 .feaprodetbox p a{color:#a52a25; text-decoration:underline;}
 .feaprodetbox p a:hover{color:#a52a25; text-decoration:none;}
 .feaprodetbox h1{margin:3px 0 0 0; padding:0px; color:#000000; font-size:17px; text-align:center;}
-.tabimg{margin:22px 0 0 0; padding:0px; float:left;}
+
+.tabimg{margin:22px 0 0 0; padding:0px; float:left; max-width:1000px; width:100%;}
+.tabimg img{width:100%;}
 /*Middle Close*/
 
 /*Footer Start*/
 .footer{margin:34px 0 0 0; padding:0px; width:100%; float:left; background:url(images/footerbg.gif) repeat-x; min-height:150px;}
-.footermid{margin:0 auto; padding:0px; width:1000px;}
-.footertop{margin:0px; padding:0px; width:1000px; float:left; font-family: 'MyriadProRegular'; font-size:14px; float:left; min-height:150px;}
+.footermid{margin:0 auto; padding:0px; max-width:1000px; width:100%;}
+.footertop{margin:0px; padding:0px; max-width:1000px; width:100%; float:left; font-family: 'MyriadProRegular'; font-size:14px; float:left; min-height:150px;}
 .footertop ul{margin:23px 0 0 110px; padding:0px; float:left;}
 .footertop ul h1{margin:0 0 12px 0; padding:0px; color:#eedcc1; font-weight:normal; font-size:14px; color:#eedcc1; font-family:'Aldrich', serif;}
 .footertop ul li{margin:1px 0 0 0; padding:0px; list-style-type:none;}
 .footertop ul li a{color:#eedcc1;}
 .footertop ul li a:hover{color:#333333;}
-.footerbot{margin:0px; padding:0px; width:1000px; float:left; min-height:53px;}
+.footerbot{margin:0px; padding:0px; max-width:1000px; width:100%; float:left; min-height:53px;}
 .mcafee{margin:10px 0 0 67px; padding:0px; float:left;}
 .copyright{margin:18px 0 0 178px; padding:0px; font-size:12px; color:#5c5c5c; font-weight:bold; float:left;}
 .powerimg{margin:10px 0 0 165px; padding:0px; float:left;}
+.fotfirstu{margin:23px 0 0 65px !important; padding:0px;}
 /*Footer Close*/
+
+/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+		
+	}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+   @media only screen and (min-width: 768px) and (max-width: 979px) {
+    .riflesbox{margin:15px 0 0 0; padding:0px; background:#eedcc1; max-width:1000px; float:left; min-height:128px;}
+	.riflesbox img{width:23.1%;}
+	.feaprodetbox{margin:0 0 0 25px; padding:0px; width:164px; float:left; font-family: 'MyriadProRegular';}
+ 	}
+ 	
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.riflesbox{margin:15px 0 0 0; padding:0px; background:#eedcc1; max-width:1000px; float:left; min-height:106px;}
+	.riflesbox img{width:22.6%;}
+	.featuredtitle{margin:0px; padding:15px 0 0 0; max-width:155px; height:150px; background:#a42924; font-family:'Aldrich', serif; font-size:22px; color:#FFFFFF; text-align:center; float:left;}
+	.feaprodetbox{margin:0 0 0 10px; padding:0px; width:135px; float:left; font-family: 'MyriadProRegular';}
+	.footertop ul{margin:23px 0 0 52px; padding:0px; float:left;}
+	.fotfirstu{margin:23px 0 0 30px !important; padding:0px;}
+	.mcafee{margin:10px 0 0 29px; padding:0px; float:left;}
+	.copyright{margin:18px 0 0 90px; padding:0px; font-size:12px; color:#5c5c5c; font-weight:bold; float:left;}
+	.powerimg{margin:10px 0 0 80px; padding:0px; float:left;}
+  	}
+	
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+   @media only screen and (max-width: 479px) {
+   	.headertopL{margin:0px; padding:0px; width:43%; float:left;}
+ 	.headertopR{margin:0px; padding:0px; width:57%; float:right;}
+	.topmenu{margin:14px 0 0 0; padding:0px; font-size:11px; font-weight:bold;}
+	.search{margin:15px 0 0 5px; padding:0px; float:left;}
+	.searchin{margin:0px; padding:3px 10px; border:1px solid #979797; font-size:12px; width:134px; float:left;}
+	.searchbut{margin:1px 0 0 6px; padding:0px; float:left;}
+	.searchbut img{width:31%;}
+	.riflesbox{margin:15px 0 0 0; padding:0px; background:#eedcc1; max-width:1000px; float:left; min-height:238px;}
+ 	.riflesbox img{float:left; width:45%;}
+	.featuredtitle{margin:0px; padding:15px 0 0 0; max-width:110px; height:193px; background:#a42924; font-family:'Aldrich', serif; font-size:16px; color:#FFFFFF; text-align:center; float:left;}
+	.feaprodetbox{margin:0 0 0 5px; padding:0px; width:79px; float:left; font-family: 'MyriadProRegular';}
+	.footertop ul{margin:23px 0 0 10px; padding:0px; float:left; font-size:11px;}
+	.footertop ul h1{margin:0 0 12px 0; padding:0px; color:#eedcc1; font-weight:normal; font-size:11px; color:#eedcc1; font-family:'Aldrich', serif;}
+	.fotfirstu{margin:23px 0 0 7px !important; padding:0px;}
+
+	
+	
+	.mcafee{margin:10px 0 0 0; padding:0px; float:left; width:20%;}
+ 	.copyright{margin:18px 12px 0 12px; padding:0px; font-size:10px; color:#5c5c5c; font-weight:bold; float:left;}
+	.powerimg{margin:10px 0 0 0; padding:0px; float:left; width:20%;}
+	 
+     }
+	 
+	@media only screen and (max-width: 320px) {
+	.headertopL{margin:0px; padding:0px; width:100%; text-align:center;}
+	.headertopL img{max-width:90%; }
+ 	.headertopR{margin:0px; padding:0px; width:100%;}
+	.topmenu{margin:14px 0 0 0; padding:0px; font-size:11px; font-weight:bold; text-align:center;}
+	.topmenu ul{margin:0 0 0 12px; padding:0px; float:left;}
+ 	.search{margin:15px 0 0 12px; padding:0px; float:left;}
+	.searchin{margin:0px; padding:3px 10px; border:1px solid #979797; font-size:12px; width:137px; float:left;}
+	.searchbut{margin:1px 0 0 6px; padding:0px; float:left;}
+	.searchbut img{width:31%;}
+	.riflesbox{margin:15px 0 0 0; padding:0px; background:#eedcc1; max-width:1000px; float:left; min-height:155px;}
+	.riflesbox img{float:left; width:43%;}
+	.featuredtitle{margin:0px; padding:15px 0 0 0; max-width:190px; height:162px; background:#a42924; font-family:'Aldrich', serif; font-size:28px; color:#FFFFFF; text-align:center; float:left;}
+	.footertop{margin:0px; padding:0px; max-width:1000px; width:100%; float:left; font-family: 'MyriadProRegular'; font-size:14px; float:left; background:#8c8c8c;}
+	#appPreView img{width:85%;}
+
+ 	}
+	 
+	 
+ 	
+	
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+.nav{visibility:hidden; height:0;}
+#responsive-menu{display:inline-block; width:100%; margin-top:13px;}
+}
+/****New style sheet ***/
+
+/*Loader Page Css Start*/
+div#appPreView{border-radius:8px 8px 8px 8px; box-shadow:0 0 6px 2px #555555; margin:100px auto; padding:20px; max-width:462px;}
+div#appPreView table{margin:0 auto;}
+div#appPreView table div#loader{text-align:center; color:#63503B; font-size:12px;}
+div#appPreView table div#loader span{color:#63503B; font-family:Helvetica; font-size:12px;}
+div#appPreView h3{font-size:12px; color:#63503B; padding:5px 0 0 0;}
+div#appPreView table div#loader > div{-moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; height: 31px;}
+div#appPreView table div#loader > div > div.alignCenter{border-color: #494134 #655948 #C4BAAD; border-style: solid; border-width: 1px; height: 29px; width: 457px;}
+div#appPreView table div#loader > div.alignCenter > progress{border-color: #352820 #352820 #c7baaa #352820; border-style: solid; border-width: 2px; height: 27px; max-width: 455px; background:#FFF; width:100%;}
+progress::-moz-progress-bar{background: none repeat scroll 0 0 #920505;}
+/*Loader Page Css Start*/
+
+.homefeapro{padding:0; margin:0; max-width:809px; float:right;}
+.feaprobox {margin:0 0 10px 10px; padding:0px;}
+.feaprobox > li{border:1px solid #CCCCCC; min-height:230px; padding:10px; max-width:167px; width:100%; background:#FFF; text-align:center; margin:0 10px 10px 0;}
+.feaprobox > li > form button{display:none;}
+.feaprobox > li h5{color:#A52A25; text-decoration:underline; font-size:12px; font-family:'MyriadProRegular'; font-weight:normal; min-height:55px;}
+.feaprobox > li h6{color:#000000; font-size:17px; margin:3px 0 0; padding:0; text-align:center; font-weight:normal;}
+.quickView{position:absolute; right:55px; top:226px; z-index:1001;}
