@@ -656,6 +656,188 @@ box-shadow:0 0 10px #AAA;
 }
 .pdf_list li:hover{ border:1px solid #ccc; border-radius:3px; box-shadow: 0 0 3px #6d5343;}
 
+/**css for video **/
+#video_content {
+    background: url("images/vcr_bg.jpg") no-repeat scroll 0 0 transparent;
+    font-family: arial;
+    height: 555px;
+    text-align: left;
+    width: 950px;
+}
+#video_content_left {
+    color: #999999;
+    display: inline;
+    float: left;
+    height: 555px;
+    margin-left: 26px;
+    width: 600px;
+}
+#video_full_active {
+    border: 1px solid #333333;
+    height: 360px;
+    margin: 44px 0 0;
+    width: 588px;
+}
+
+#video_full_stats {
+    height: 20px;
+    margin: 14px 0 0;
+}
+#video_full_rating {
+    display: inline;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    width: 212px;
+}
+#video_full_rating_text {
+    display: inline;
+    float: left;
+    height: 20px;
+    padding-left: 4px;
+    width: 94px;
+}
+
+#video_full_stars_container {
+    display: inline;
+    float: left;
+    height: 20px;
+    margin-top: 0;
+    width: 110px;
+}
+
+#video_full_stars_grey {
+    background: url("images/vcr_star_grey.png") repeat-x scroll 0 0 transparent;
+    display: inline;
+    height: 20px;
+    position: absolute;
+    width: 70px;
+    z-index: 5;
+}
+#video_full_stars_red {
+    background: url("images/vcr_star_red.png") repeat-x scroll 0 0 transparent;
+    display: inline;
+    height: 20px;
+    position: absolute;
+    width: 0;
+    z-index: 10;
+}
+#video_full_views {
+    display: inline;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100px;
+}
+#video_full_title {
+    clear: both;
+    color: #BBBBBB;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px 0 0 10px;
+    width: 520px;
+}
+#video_full_desc {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 6px 0 0 10px;
+    width: 520px;
+}
+#video_content_right {
+    display: inline;
+    float: right;
+    height: 555px;
+    width: 308px;
+}
+#video_list {
+    display: inline;
+    float: left;
+    height: 380px;
+    margin: 66px 0 0 16px;
+    overflow: hidden;
+    width: 272px;
+}
+#video_list .viewport {
+    display: inline;
+    float: left;
+    height: 380px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 256px;
+}
+#video_list .overview {
+    left: 0;
+    list-style: none outside none;
+    position: absolute;
+    top: 0;
+}
+.video_container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid #444444;
+    color: #CCCCCC;
+    height: 88px;
+    overflow: hidden;
+    transition: background-color 0.2s ease 0s;
+    width: 256px;
+}
+.video_scroll_thumb {
+    display: inline;
+    float: left;
+    width: 100px;
+}
+.video_scroll_thumb img {
+    border: 1px solid #666666;
+    height: 66px;
+    margin: 10px 0 0 6px;
+    vertical-align: middle;
+    width: 88px;
+}
+.video_scroll_info {
+    color: #CCCCCC;
+    display: inline;
+    float: right;
+    font-size: 12px;
+    height: 90px;
+    overflow: hidden;
+    padding: 10px 4px 4px 0;
+    text-align: left;
+    width: 136px;
+}
+
+.video_runtime {
+    color: #DD0000;
+}
+.scrollbar {
+    background: url("images/scrollbar_vertical_gutter_380.png") no-repeat scroll 0 0 transparent;
+    display: inline;
+    float: left;
+    height: 380px;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+}
+.scrollbar .track {
+    height: 380px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 16px;
+}
+.scrollbar .thumb {
+    background: url("images/scrollbar_vertical_slider.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 144px;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+
 /*NEW DROP DWON MENU CSS*/
 .megamenu{position:absolute; display:none; background:#4a4a49; padding:10px; font:normal 12px Verdana; z-index:100; width:960px; font-family:Arial, Helvetica, sans-serif;
  /* box-shadow:1px 1px 1px 1px #333;*/ border-bottom-left-radius:15px; border-bottom-right-radius:15px; border-bottom:2px #333 solid; border-left:#333 2px solid; 
@@ -665,6 +847,17 @@ box-shadow:0 0 10px #AAA;
 .megamenu ul li a{color:#BBBBBB; padding:2px 7px; display:block;}
 .megamenu ul li a:hover{color:#FFFFFF; background:#333; padding:2px 7px; display:block;}
 /*NEW DROP DWON MENU CSS*/
+
+/*****slideshow*******/
+
+#slideshowContainer{position:relative; z-index:10; height:300px; width:1000px; margin:0 auto; overflow:hidden; z-index:5;} /* setting height/width and overflow hidden eliminates popping (all banners showing then hiding) */
+#slideshowContainer  ul, .slideshow li{list-style:none; margin:0; padding:0; display:inline; float:left; width:1000px;} /* the slides */
+#slideshowNav{z-index: 50; position: absolute; right:10px; float:right;  text-align:left; top:15px; padding:0px; margin:0px;}
+#slideshowNav a{margin:0 5px 0 0; text-decoration:none; display:inline-block; padding:5px 10px; border:1px solid #000; color:#ffffff; background:#000; cursor:pointer; 	-webkit-border-radius: 8px; opacity:0.6;}
+.controls{width:10px; height:10px;}
+#slideshowNav a:hover, #slideshowNav a.activeSlide{color:#FFFFFF; background:#871101; opacity:0.6;}
+#slideshowNav a:focus {outline:none;}
+/*****slideshow*******/
 
 /**** end vilas stylesheet ***/
 
@@ -732,9 +925,6 @@ max-width:100%; outline:medium none; overflow:hidden; padding:10px; width:100%; 
 .feaprodetbox p a{color:#a52a25; text-decoration:underline;}
 .feaprodetbox p a:hover{color:#a52a25; text-decoration:none;}
 .feaprodetbox h1{margin:3px 0 0 0; padding:0px; color:#000000; font-size:17px; text-align:center;}
-
-.tabimg{margin:22px 0 0 0; padding:0px; float:left; max-width:1000px; width:100%;}
-.tabimg img{width:100%;}
 /*Middle Close*/
 
 /*Footer Start*/
@@ -843,6 +1033,39 @@ div#appPreView table div#loader > div.alignCenter > progress{border-color: #3528
 progress::-moz-progress-bar{background: none repeat scroll 0 0 #920505;}
 /*Loader Page Css Start*/
 
+
+/*****Tabing Section*****/
+.tabimg{margin:22px 0 0 0; padding:0px; float:left; max-width:1000px; width:100%;}
+.tabimg .ui-widget-content{background:none; border:none !important; margin:0px; padding:0px;}
+.tabimg .ui-widget-header{background:none; border:none;}
+
+.tabimg .ui-state-default{background:url(images/taboff.jpg) no-repeat !important;  width:329px; height:35px; font-family:'Aldrich', serif; font-size:24px; text-align:center;}
+.tabimg .ui-state-active{background:url(images/tabon.jpg) no-repeat !important; width:329px; height:35px; font-family:'Aldrich', serif; font-size:24px; text-align:center;}
+.tabimg .ui-tabs .ui-tabs-nav li{border:0 none; float:left; list-style:none outside none; margin:0; padding:0; position:relative; top:0; white-space:nowrap;}
+.tabimg .ui-state-default a{color:#FFFFFF !important; text-decoration:none;}
+.tabimg .ui-tabs .ui-tabs-nav li a{float:none; padding:0px; text-decoration:none; text-align:center;}
+.botbotblack{background:url(images/tabbotbg.gif) repeat-x !important;}
+.tabimg .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br{border-bottom-right-radius: 0px;}
+.tabimg .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{border-bottom-left-radius: 0px;}
+
+.tabconsection{background:#eedcc1 !important; margin:0 0 0 0; padding:0px; text-align:center;}
+.tabproduct{margin:0px; padding:0px; width:143px; float:left;}
+.tabproduct h1{margin:0px; padding:0px; font-size:12px; font-family:'MyriadProRegular';}	
+.tabproduct h1 a{color:#a52a25;}
+.tabproduct h1 a:hover{color:#000000;}
+.tab_rightbg{margin:0px; padding:0 30px; float:left;}
+.videohere{margin:0 0 0 50px; padding:0px; float:left;}
+
+.tabartical{margin:0px; padding:0px; width:190px; float:left; text-align:left;}
+.tabartical h1{margin:0px; padding:0px; font-size:14px; font-family:'MyriadProRegular';}	
+.tabartical h1 a{color:#a52a25;}
+.tabartical h1 a:hover{color:#000000;}
+.tabartical h2{margin:0px; padding:3px 0 0 0; font-size:12px; font-weight:normal; line-height:16px;}
+.tabartical p{text-align:right; padding:3px 0 0 0; margin:0px;}
+
+.tabartical_rightbg{margin:0px; padding:0 30px; float:left;}
+/*****Tabing Section*****/
+ 
 .homefeapro{padding:0; margin:0; max-width:809px; float:right;}
 .feaprobox {margin:0 0 10px 10px; padding:0px;}
 .feaprobox > li{border:1px solid #CCCCCC; min-height:230px; padding:10px; max-width:167px; width:100%; background:#FFF; text-align:center; margin:0 10px 10px 0;}
@@ -850,3 +1073,4 @@ progress::-moz-progress-bar{background: none repeat scroll 0 0 #920505;}
 .feaprobox > li h5{color:#A52A25; text-decoration:underline; font-size:12px; font-family:'MyriadProRegular'; font-weight:normal; min-height:55px;}
 .feaprobox > li h6{color:#000000; font-size:17px; margin:3px 0 0; padding:0; text-align:center; font-weight:normal;}
 .quickView{position:absolute; right:55px; top:226px; z-index:1001;}
+

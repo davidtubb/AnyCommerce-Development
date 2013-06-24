@@ -14,7 +14,7 @@ var _gaq = _gaq || {'push':function(){}} //here for testing. REPLACE BEFORE DEPL
 var myCreole;
 
 var app = {vars:{
-	"release":"20130622174020",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20130624191420",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"_clientid":"zmvc",
 	"baseURL":"", //used in non-local mode.
 	"checkoutAuthMode" : "required",//can be passive, active or required
@@ -44,24 +44,22 @@ css files should be included before any .js file to ensure they are downloaded i
 <script type="text/javascript">
 app.u.loadScript(app.vars.baseURL+"_init.js");
 </script>
-
 <script type="text/javascript" src="js/youtube.js"></script>
 <script type="text/javascript" src="js/jquery.tinyscrollbar.js"></script>
 <script type="text/javascript" src="js/jkmegamenu.js"></script>
 <script type="text/javascript">
 jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
 </script>
-
 </head>
 <body>
 <!-- what is displayed onLoad until the view is loaded -->
 <div id='appPreView'>
- <table>
+  <table>
     <tr>
       <td align="center"><img src="images/main_logo.png" /></td>
     </tr>
     <tr>
-        <td>&nbsp;</td>
+      <td>&nbsp;</td>
     </tr>
     <tr>
       <td align="center"><div id="loader">
@@ -92,89 +90,82 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
     </tr>
   </table>-->
 </div>
-
 <div id='appView' class='displayNone'>
   <!-- VIEW CONTENT -->
   <!-- leave the appView div, put your your html here ...  -->
- <div class="wrapper">
- 
+  <div class="wrapper">
     <!--Header Start -->
     <div class="header">
-        <div class="headertop">
-            <div class="headertopL"><a href="#" onClick="return showContent('category',{'navcat' : '.'});"><img src="images/logo.gif" alt="David Tubb" border="0" title="David Tubb" /></a></div>
-            <div class="headertopR">
-                <div class="topmenu">
-                    <ul>     
-                        <li><a href="#" onClick="return showContent('customer',{'show':'myaccount'});">Login</a></li>
-                        <li><span>|</span></li>
-                        <li><a href="#" onClick="return showContent('customer',{'show':'myaccount'});">My Account</a></li>
-                        <li><span>|</span></li>
-                        <li><a href="#" onClick="return showContent('cart',{});" >View Cart</a></li>
-                        <li><span>|</span></li>
-                        <li><a href="#" onClick="return showContent('company',{'show':'faq'});">Help</a></li>
-                    </ul>
-                    
-                </div>
-                <div class="search">
-<form id='headerSearchFrm' name='headerSearchFrm' action='#' class='productSearchForm' method="get">
-    <input type='search' name='KEYWORDS' id='txtSearch' class="productSearchKeyword handleDefault searchin"/>
-    <input type="image" src="images/search.gif" class="searchbut" alt="Search" title="Search" />
-</form>
-                    <!--<form action="" method="get">
-                        <input class="searchin" />
-                        <input type="image" src="images/search.gif" class="searchbut" alt="Search" title="Search" />
-                    </form>-->
-                </div> 
+      <div class="headertop">
+        <div class="headertopL"><a href="#" onClick="return showContent('category',{'navcat' : '.'});"><img src="images/logo.gif" alt="David Tubb" border="0" title="David Tubb" /></a></div>
+        <div class="headertopR">
+          <div class="topmenu">
+            <ul>
+              <li><a href="#" onClick="return showContent('customer',{'show':'myaccount'});">Login</a></li>
+              <li><span>|</span></li>
+              <li><a href="#" onClick="return showContent('customer',{'show':'myaccount'});">My Account</a></li>
+              <li><span>|</span></li>
+              <li><a href="#" onClick="return showContent('cart',{});" >View Cart</a></li>
+              <li><span>|</span></li>
+              <li><a href="#" onClick="return showContent('company',{'show':'faq'});">Help</a></li>
+            </ul>
+          </div>
+          <div class="search">
+            <form id='headerSearchFrm' name='headerSearchFrm' action='#' class='productSearchForm' method="get">
+              <input type='search' name='KEYWORDS' id='txtSearch' class="productSearchKeyword handleDefault searchin"/>
+              <input type="image" src="images/search.gif" class="searchbut" alt="Search" title="Search" />
+            </form>
             </div>
         </div>
-         <div class="nav">
+      </div>
+      <div class="nav">
             <ul>     
            <li style="padding:4px 0 0 45px;"><a href="#." id="megaanchor" onClick="return showContent('category',{'navcat' : '.'});">Products</a></li>
           <li><a href="#." onClick="return showContent('company',{'show':'article'});">Articles</a></li>
-          <li><a href="#." onClick="return showContent('',{KEYWORDS: 'videos'});">Videos</a></li>
+          <li><a href="#." onClick="return showContent('company',{'show': 'videos'});">Videos</a></li>
           <li><a href="#." onClick="return showContent('company',{'show':'about'});">About David Tubb</a></li>
           <li><a href="#." onClick="return showContent('company',{'show':'product_info'});">Product Documentation</a></li>
           <li><a href="#." onClick="return showContent('company',{'show':'faq'});">FAQ</a></li>
             </ul>
             <div id="megamenu1" class="megamenu">
              <ul>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'bif bang pow figure'});">Accuracy Parts</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'bridge direct figure'});">Accuracy Reloading</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'dc comics figure'});">AR-10 & SR-25 Accuracy & Reliability Parts</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'diamond select figure'});">AR-15 Accuracy & Reliability Parts</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'enterbay figure'});">Books & DVDs</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.accuracyparts'});">Accuracy Parts</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.accuracyreloading'});">Accuracy Reloading</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbar10andsr25accuracyandreliabilityparts'});">AR-10 & SR-25 Accuracy & Reliability Parts</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbar15accuracyandreliabilityparts'});">AR-15 Accuracy & Reliability Parts</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.booksanddvds'});">Books & DVDs</a></li>
              </ul>
              <ul>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'bif bang pow figure'});">Competition & Shooting Accessories</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'bridge direct figure'});">CS Springs</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'dc comics figure'});">DTAC Precision Loaded Ammunition</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'diamond select figure'});">Dynamic Targeting Reticle (DTR) Scopes</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'enterbay figure'});">Final Finish & TMS</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbcompetitionandshootingaccessories'});">Competition & Shooting Accessories</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbcssprings'});">CS Springs</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbdtacprecisionloadedammunition'});">DTAC Precision Loaded Ammunition</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.dynamictargetingreticledtrscopes'});">Dynamic Targeting Reticle (DTR) Scopes</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.finalfinishandfinalfinishtms'});">Final Finish & TMS</a></li>
              </ul>
              <ul style="border-right:none;">
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'bif bang pow figure'});">Loaded Ammunition</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'bridge direct figure'});">M1 Garand & M1A CS Springs</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'dc comics figure'});">Remington 700 Accuracy Parts</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'diamond select figure'});">Speedlock Firing Pins for Bolt Rifles</a></li>
-              <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'enterbay figure'});">Tubb 2000 & Spec-Tac-LR Rifles</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbloadedammunition'});">Loaded Ammunition</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbm1garandandm1acssprings'});">M1 Garand & M1A CS Springs</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbremington700accuracyparts'});">Remington 700 Accuracy Parts</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbspeedlockfiringpinsforboltrifles'});">Speedlock Firing Pins for Bolt Rifles</a></li>
+              <li><a href="#" onClick="return showContent('category',{'navcat': '.tubb2000andspectaclrriflesandaccessories'});">Tubb 2000 & Spec-Tac-LR Rifles</a></li>
              </ul>
           </div>
          </div>
-         <!-- Responsive Menu -->
-             <form id="responsive-menu" action="#" method="post">
-              <select>
-                <option value="">Navigation</option>
-                <option value="#.">Products</option>
-                <option value="#.">Articles</option>
-                <option value="#.">Videos</option>
-                <option value="#.">About David Tubb</option>
-                <option value="#.">Product Documentation</option>
-                <option value="singleblog.html">FAQ</option>
-               </select>
-            </form>
-          <!-- Responsive Menu -->
+      <!-- Responsive Menu -->
+      <form id="responsive-menu" action="#" method="post">
+        <select>
+          <option value="">Navigation</option>
+          <option value="#.">Products</option>
+          <option value="#.">Articles</option>
+          <option value="#.">Videos</option>
+          <option value="#.">About David Tubb</option>
+          <option value="#.">Product Documentation</option>
+          <option value="singleblog.html">FAQ</option>
+        </select>
+      </form>
+      <!-- Responsive Menu -->
     </div>
-<!--Header Start -->
+    <!--Header Start -->
     <div id='globalMessaging' class='appMessaging'></div>
     <!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
     <!-- These add specific functionality for the app. In most cases, you want to leave them alone. -->
@@ -190,40 +181,40 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
     <!-- /VIEW CONTENT -->
   </div>
   <div class="footer">
-	<div class="footermid">
-    	<div class="footertop">
-        	<ul class="fotfirstu">
-            	<h1>CUSTOMER SERVICE</h1>
-            	<li><a href="#.">Frequently Asked Questions</a></li>
-                <li><a href="#.">Return Policy</a></li>
-                <li><a href="#.">Sitemap</a></li>
-             </ul>
-             <ul>
-            	<h1>CONTACT US</h1>
-            	<li><a href="#.">Contact Us</a></li>
-                <li><a href="#.">Customer Feedback</a></li>
-              </ul>
-              <ul>
-            	<h1>MY ACCOUNT</h1>
-            	<li><a href="#.">Log In</a></li>
-                <li><a href="#.">Manage Your Account</a></li>
-                <li><a href="#.">Gift Certificates</a></li>
-             </ul>
-             <ul>
-            	<h1>ABOUT US</h1>
-             	<li><a href="#.">Privacy & Security</a></li>
-                <li><a href="#.">Terms & Conditions</a></li>
-                <li><a href="#.">Legal Information</a></li>
-                <li><a href="#.">Email Sign Up</a></li>
-             </ul>
-        </div>
-        <div class="footerbot">
-        	<div class="mcafee"><img src="images/mcafee.gif" alt="" /></div>
-            <div class="copyright">&copy; Copyright Superior Shooting Systems, Inc.2013</div>
-            <div class="powerimg"><img src="images/poweredby.gif" alt="" /></div>
-        </div>
+    <div class="footermid">
+      <div class="footertop">
+        <ul class="fotfirstu">
+          <h1>CUSTOMER SERVICE</h1>
+          <li><a href="#.">Frequently Asked Questions</a></li>
+          <li><a href="#.">Return Policy</a></li>
+          <li><a href="#.">Sitemap</a></li>
+        </ul>
+        <ul>
+          <h1>CONTACT US</h1>
+          <li><a href="#.">Contact Us</a></li>
+          <li><a href="#.">Customer Feedback</a></li>
+        </ul>
+        <ul>
+          <h1>MY ACCOUNT</h1>
+          <li><a href="#.">Log In</a></li>
+          <li><a href="#.">Manage Your Account</a></li>
+          <li><a href="#.">Gift Certificates</a></li>
+        </ul>
+        <ul>
+          <h1>ABOUT US</h1>
+          <li><a href="#.">Privacy & Security</a></li>
+          <li><a href="#.">Terms & Conditions</a></li>
+          <li><a href="#.">Legal Information</a></li>
+          <li><a href="#.">Email Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="footerbot">
+        <div class="mcafee"><img src="images/mcafee.gif" alt="" /></div>
+        <div class="copyright">&copy; Copyright Superior Shooting Systems, Inc.2013</div>
+        <div class="powerimg"><img src="images/poweredby.gif" alt="" /></div>
+      </div>
     </div>
-</div>
+  </div>
   <!--
 	** REMINDER : DO NOT PUT ANY GRAPHICS/CONTENT THAT SHOULD NOT APPEAR ON EVERY PAGE IN THE VIEW (HERE)
 	**				  INSTEAD PUT THEM INTO <div id="homepageTemplate"></div>
@@ -265,45 +256,92 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 -->
   <div id='homepageTemplate' class='homeTemplate'>
     <div class="middle">
-  <div class="banner"><img src="images/banner.jpg" alt=""/></div>
-  <div class="riflesbox"><a href="#" onClick="return showContent('category',{'navcat' : '.tubb2000andspectaclrriflesandaccessories'});"><img src="images/riflespic1.jpg" alt="" class="riflespic" border="0" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.tubbar15accuracyandreliabilityparts'});"><img src="images/riflespic2.jpg" alt="" border="0" class="riflespic" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.accuracyparts'});"><img src="images/riflespic3.jpg" alt="" border="0" class="riflespic" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.'});"><img src="images/riflespic4.jpg" alt="" border="0" class="riflespic" /></a></div>
-  <!--<div class="featuredpro">
-            	<div class="featuredtitle">
-                	FEATURED PRODUCTS
-                </div>
-                <div class="feaprodetbox">
-                	<img src="images/dvd_pic1.jpg" />
-                    <p><a href="#.">DVD "Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb"</a></p>
-                    <h1>Price: $29.95</h1>
-                </div>
-                
-                 <div class="feaprodetbox">	
-                	<img src="images/dvd_pic2.jpg" />
-                    <p><a href="#.">Tubb Precision AR-15 CS Spring Performance Pack</a></p>
-                    <h1>Price: $57.95</h1>
-                </div>
-                
-                 <div class="feaprodetbox">
-                	<img src="images/dvd_pic1.jpg" />
-                    <p><a href="#.">DVD "Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb"</a></p>
-                    <h1>Price: $29.95</h1>
-                </div>
-                
-                 <div class="feaprodetbox">
-                	<img src="images/dvd_pic1.jpg" />
-                    <p><a href="#.">DVD "Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb"</a></p>
-                    <h1>Price: $29.95</h1>
-                </div>
-             </div>-->
-  <div class="featuredpro">
-    <div class="featuredtitle">FEATURED PRODUCTS</div>
-  <div class="homefeapro"> <ul data-bind="var: category(@products); format: productList; size:4 editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; before:; withReviews:1;" class='listStyleNone fluidList clearfix feaprobox productList'>
-    </ul></div>
-    <p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
-  </div>
-  <div class="tabimg"><img src="images/tab_img.jpg" /></div>
-</div>
-
+      <div class="banner">
+        <div id="slideshowContainer" class="clearfix marginBottom">
+          <div id="slideshowNav"></div>
+          <ul id="wideSlideshow" class="pics slideshow">
+            <li><img src="images/banner.jpg" alt=""/></li>
+            <li><img src="images/tubb.png" alt=""></li>
+            <li><img src="images/model52.png" alt=""></li>
+          </ul>
+        </div>
+      </div>
+      <div class="riflesbox"><a href="#" onClick="return showContent('category',{'navcat' : '.tubb2000andspectaclrriflesandaccessories'});"><img src="images/riflespic1.jpg" alt="" class="riflespic" border="0" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.tubbar15accuracyandreliabilityparts'});"><img src="images/riflespic2.jpg" alt="" border="0" class="riflespic" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.accuracyparts'});"><img src="images/riflespic3.jpg" alt="" border="0" class="riflespic" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.'});"><img src="images/riflespic4.jpg" alt="" border="0" class="riflespic" /></a></div>
+      <div class="featuredpro">
+        <div class="featuredtitle">FEATURED PRODUCTS</div>
+        <div class="homefeapro">
+          <ul data-bind="var: category(@products); format: productList; items_per_page:4; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; before:; withReviews:1;" class='listStyleNone fluidList clearfix feaprobox productList'>
+          </ul>
+        </div>
+        <p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
+      </div>
+      <script>
+$("#tabs").tabs();
+</script>
+      <div class="tabimg">
+        <div id="tabs">
+          <ul class="botbotblack">
+            <li style="margin-left:8px;"><a href="#tabs-1">Videos</a></li>
+            <li><a href="#tabs-2">Articles</a></li>
+          </ul>
+          <div id="tabs-1" class="tabconsection">
+             <div class="tabproduct">
+             	<p><img src="images/tabpropic1.jpg" /></p>
+             	<h1><a href="#.">Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb (Promo)</a></h1>
+             </div>
+             <div class="tab_rightbg"><img src="images/tab_rightbg.gif"></div>
+             <div class="tabproduct">
+             	<p><img src="images/tabpropic2.jpg" /></p>
+             	<h1><a href="#.">Tubb Precision AR-15 Performance Parts & Accessories</a></h1>
+             </div>
+             <div class="tab_rightbg"><img src="images/tab_rightbg.gif"></div>
+             <div class="tabproduct">
+             	<p><img src="images/tabpropic3.jpg" /></p>
+             	<h1><a href="#.">David Tubb - The Art & Technique of the Modern Match Rifle</a></h1>
+             </div>
+             <div class="tab_rightbg"><img src="images/tab_rightbg.gif"></div>
+             <div class="tabproduct">
+             	<p><img src="images/tabpropic4.jpg" /></p>
+             	<h1><a href="#.">David Tubb Night Shoot with SureFire M962LT WeaponLight</a></h1>
+             </div>
+             <div class="videohere"><a href="#."><img src="images/videos_here.gif" border="0"></a></div>
+              
+             <div class="cb"></div>
+          </div>
+          <div id="tabs-2" class="tabconsection">
+          	 <div class="tabartical">
+             	<h1><a href="#.">New Barrel Break-In</a></h1>
+                <h2>Newly updated (February 2012) from previous materials, this brand new article explains David Tubb's beliefs and process for breaking in both factory and handlapped barrels</h2>	
+                    <p><a href="#.">>>Read</a></p>
+            </div>
+             <div class="tabartical_rightbg"><img src="images/tab_rightbg.gif"></div>
+             <div class="tabartical">
+             	<h1><a href="#.">TUBB 2000 Concepts</a></h1>
+                <h2>This is must reading for anyone interested in the TUBB 2000 rifle or firearms design in general.</h2>	
+                    <p><a href="#.">>>Read</a></p>
+            </div>
+             <div class="tabartical_rightbg"><img src="images/tab_rightbg.gif"></div>
+              <div class="tabartical">
+             	<h1><a href="#.">High Power Tips</a></h1>
+                <h2>Some of David's thoughts on preparation and mistake prevention. It is not too late to use this for Perry this year!</h2>	
+                    <p><a href="#.">>>Read</a></p>
+            </div>
+             <div class="tabartical_rightbg"><img src="images/tab_rightbg.gif"></div>
+               <div class="tabartical">
+             	<h1><a href="#.">High Power Success</a></h1>
+                <h2>This article outlines six tenents he has followed throughout his career. As with any and all by David, it's must reading for any serious shooter.</h2>	
+                    <p><a href="#.">>>Read</a></p>
+            </div>
+             
+             
+             
+             <div class="cb"></div>
+           </div>
+        </div>
+      </div>
+      <!--  <div class="tabimg"><img src="images/tab_img.jpg" /></div>
+-->
+    </div>
     <!--<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>-->
     <!--<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; before:<h2>Featured Items</h2>; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
 	<p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>-->
@@ -312,7 +350,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 
 	<a href="#" onClick="return showContent('search',{'TAG':'IS_BESTSELLER'});">See all Best Sellers</a>-->
     <!-- a sample of how to get a 'list' src onto the page. -->
-    <ul data-bind="var: list($models.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25;" class='listStyleNone fluidList clearfix noPadOrMargin productList'>
+    <ul data-bind="var: list($models.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 9;" class='listStyleNone fluidList clearfix noPadOrMargin productList'>
     </ul>
   </div>
   <!--
@@ -329,7 +367,7 @@ don't modify the 'data-templateid' unless you are changing template names and up
     <ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'>
     </ul>
     <!-- outputs a list of subcategories -->
-    <ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25;" class='listStyleNone fluidList clearfix noPadOrMargin productList'>
+    <ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 9;" class='listStyleNone fluidList clearfix feaprobox productList'>
     </ul>
     <!-- outputs the product list -->
     <p data-bind="var: category(%page.description2); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
@@ -360,9 +398,9 @@ remember to NOT put the button inside the 'onclick' container or two events will
       <div onClick="showContent('product',{'pid':$(this).attr('data-pid')})" data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;' class='pointer'>
         <div class='prodThumbContainer' data-bind='var:product(pid); format:addPicSlider; extension:myRIA;'> <img src='blank.gif' class='prodThumb' alt='' data-bind='var: product(zoovy:prod_image1); format:imageURL;' width='120' height='120' /> </div>
         <h5 data-bind='var: product(zoovy:prod_name); format:text;'></h5>
-        <h6 data-bind='var: product(zoovy:base_price); format:money; currencySign: $;  hideZero:true; className:price; pretext: Our Price: ;'></h6>
+        <h6 data-bind='var: product(zoovy:base_price); format:money; currencySign: $;  hideZero:true; className:price; pretext:Price: ;'></h6>
         <span data-bind='var: reviews(reviews.average); format:addClass; className:review_;' class='reviewSprite'></span>
-        <!-- 	<span data-bind='var: reviews(reviews.total); format:text; pretext: from ;posttext: reviews; className:numReviews;'></span> -->
+        <span data-bind='var: reviews(reviews.total); format:text; pretext: from ;posttext: reviews; className:numReviews;'></span>
       </div>
       <form data-bind='var: product(pid); format:atcForm; extension:store_product;' class='prodViewerAddToCartForm clearfix' action='#' onSubmit="app.ext.myRIA.u.addItemToCart($(this),{'action':'modal'}); return false;">
         <input type='hidden' name='qty' value='1' />
@@ -619,6 +657,90 @@ if you change these, you should move them above this comment so that when you (o
           </div>
         </div>
       </div>
+      <div id='videosArticle' class='textContentArea article'>
+   <div id="pgbldr_container">
+	<div class="pgbldr_h1"><h1>Videos</h1></div>
+	<div class="pd16 tac">
+
+		<div id="video_content">
+		
+			<div id="video_content_left">
+				<div id="video_full_active"><iframe width="588" height="360" frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/hbnqZFt92JE?wmode=transparent"></iframe></div>
+				<div id="video_full_stats">
+					<div id="video_full_rating">
+						<div id="video_full_rating_text">Average Rating:</div>
+						<div id="video_full_stars_container">
+							<div id="video_full_stars_grey"></div>
+						  <div id="video_full_stars_red" style="width: 0px;"></div>
+					  </div>
+					</div>
+					<div id="video_full_views">Views: 1066</div>
+				</div>
+				<div id="video_full_title">David Tubb Night Shoot with SureFire M962LT WeaponLight</div>
+				<div id="video_full_desc"></div>
+			</div>
+		
+			<div id="video_content_right">
+				<div id="video_list">
+					<div class="viewport">
+						<div class="overview" id="video_list_inner" style="top: -1530.83px;"><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/mlA0rS2B2Iw/3.jpg"></div><div class="video_scroll_info">Tubb Precision AR-15 Performance Parts &amp; Accessories <span class="video_runtime">(6:10)</span></div></div><div class="video_container video_container_active"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/hbnqZFt92JE/3.jpg"></div><div class="video_scroll_info">David Tubb Night Shoot with SureFire M962LT WeaponLight <span class="video_runtime">(1:55)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/BhZgxNnsiYU/3.jpg"></div><div class="video_scroll_info">David Tubb Animated Logo <span class="video_runtime">(0:09)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/oajANAxHEsI/3.jpg"></div><div class="video_scroll_info">Grunt Loop Demo: Using with Double &amp; Single Point Slings <span class="video_runtime">(2:25)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/U1NVCqGYqig/3.jpg"></div><div class="video_scroll_info">Tubb Precision AR-15 CS Spring Performance Package <span class="video_runtime">(2:49)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/Ehoz23TsEmk/3.jpg"></div><div class="video_scroll_info">FinalFinish &amp; TMS Loaded Ammo Complete Care ProPacks <span class="video_runtime">(2:47)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/KxuMtyF2Ym0/3.jpg"></div><div class="video_scroll_info">FinalFinish &amp; TMS - Complete Care ProPacks <span class="video_runtime">(3:10)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/5DsYhPLSUD8/3.jpg"></div><div class="video_scroll_info">Tubb Precision Blended Boron Nitride Coating Kit <span class="video_runtime">(7:30)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/CfGL5A6nPSo/3.jpg"></div><div class="video_scroll_info">Tubb Precision Bearing Surface Comparator (BSC) <span class="video_runtime">(4:25)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/ZJtCJw4--X8/3.jpg"></div><div class="video_scroll_info">David's Tips: Shooting from Pickups with the Model 52 Versa-Pod <span class="video_runtime">(2:02)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/sIepYnnYFA8/3.jpg"></div><div class="video_scroll_info">T2K Owner's Tip: Recocking the T2K Bolt (out of the gun) <span class="video_runtime">(0:51)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/1hdKlfdve5g/3.jpg"></div><div class="video_scroll_info">The Tubb 2000 - History &amp; National Records <span class="video_runtime">(4:41)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/1rJUCBBn0lE/3.jpg"></div><div class="video_scroll_info">The Tubb 2000 Spec-Tac-LR Rifle (part 2) <span class="video_runtime">(10:16)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/GqJA5koBlMA/3.jpg"></div><div class="video_scroll_info">The Tubb 2000 Spec-Tac-LR Rifle - (part 1) <span class="video_runtime">(7:38)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/xW8LqW_JgzY/3.jpg"></div><div class="video_scroll_info">Tubb Precision T2K Trigger Shoe <span class="video_runtime">(0:39)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/h0zDqGHBKwk/3.jpg"></div><div class="video_scroll_info">T2K / AR-10 / SR-25 Single-shot Loading Block <span class="video_runtime">(0:59)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/IRY2xQCZoIY/3.jpg"></div><div class="video_scroll_info">Tubb Precision T2K Rear Sight Mounting Base <span class="video_runtime">(0:35)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/CzHUgQAWQ5s/3.jpg"></div><div class="video_scroll_info">Tubb Precision T2K RH Wood Grip <span class="video_runtime">(0:32)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/SvjtC_A9qaw/3.jpg"></div><div class="video_scroll_info">Tubb Precision T2K / Spec-Tac-LR Bolt Disassembly Tool <span class="video_runtime">(0:38)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/Rr4PtOD9XQE/3.jpg"></div><div class="video_scroll_info">Tubb Precision T2K / Spec-Tac-LR Barrel Vise <span class="video_runtime">(2:17)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/ius-EctaVGk/3.jpg"></div><div class="video_scroll_info">Tubb Precision T2K / Spec-Tac-LR Action Wrench <span class="video_runtime">(0:50)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/NM5GhvCeYfs/3.jpg"></div><div class="video_scroll_info">Tubb Precision T2K &amp; AR-15 Front Sights <span class="video_runtime">(3:36)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/eO_hRnWQHbk/3.jpg"></div><div class="video_scroll_info">Tubb Precision SpeedLock Firing Pins with CS Springs <span class="video_runtime">(5:38)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/C4A0H1okelA/3.jpg"></div><div class="video_scroll_info">Tubb Precision Sako-style Extractors <span class="video_runtime">(2:47)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/F5859BuUuXY/3.jpg"></div><div class="video_scroll_info">DTAC 6mm 115gr Sierra HPBT Closed Nose Bullets <span class="video_runtime">(1:24)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/C5gBMIXMBxk/3.jpg"></div><div class="video_scroll_info">Tubb Precision High Power Shooting Hat <span class="video_runtime">(2:09)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/CT5sjiAlyjQ/3.jpg"></div><div class="video_scroll_info">Tubb Precision Scope Rings <span class="video_runtime">(1:14)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/zMXRe6csiT0/3.jpg"></div><div class="video_scroll_info">Tubb Precision Oversize Recoil Lugs <span class="video_runtime">(1:52)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/UnW6nEe9qFs/3.jpg"></div><div class="video_scroll_info">Premier Scopes with the Dynamic Targeting Reticle (DTR) <span class="video_runtime">(1:58)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/L60tns1TknQ/3.jpg"></div><div class="video_scroll_info">Norma 6XC Brass <span class="video_runtime">(1:14)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/dqvVHS6T_sM/3.jpg"></div><div class="video_scroll_info">Tubb Precision Muzzle Brake &amp; Locking Nut <span class="video_runtime">(4:30)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/bcSBx70vumk/3.jpg"></div><div class="video_scroll_info">Tubb Precision Scope-mounted Levels <span class="video_runtime">(3:59)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/zpdJ9_QeWCM/3.jpg"></div><div class="video_scroll_info">Tubb Precision Barrel Level <span class="video_runtime">(1:09)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/4nwOx-DYQK0/3.jpg"></div><div class="video_scroll_info">Tubb Precision HeartBraker Sling <span class="video_runtime">(5:33)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/OP_U_NxZms8/3.jpg"></div><div class="video_scroll_info">Tubb Precision Handstop w QD Sling Swivel Attachment <span class="video_runtime">(1:24)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/O2YnKDXhpac/3.jpg"></div><div class="video_scroll_info">Tubb Precision Grunt Loops -  Rear Single or Double Point Sling Attachments for AR-15 M4 &amp; A2 Stocks <span class="video_runtime">(2:32)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/SIvvTxVnx_g/3.jpg"></div><div class="video_scroll_info">FinalFinish&trade; &amp; TMS Kits &amp; Loaded Ammo <span class="video_runtime">(6:57)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/e0KmIwg0_lQ/3.jpg"></div><div class="video_scroll_info">FinalFinish&trade; Kits for Pistols <span class="video_runtime">(3:44)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/SISygC6MuNE/3.jpg"></div><div class="video_scroll_info">DVDs by David Tubb <span class="video_runtime">(1:55)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/uGdV-KKQ-A8/3.jpg"></div><div class="video_scroll_info">Tubb Precision AR-15 Carrier Weight System (CWS&trade;) <span class="video_runtime">(4:42)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/pU7Rz8EGb08/3.jpg"></div><div class="video_scroll_info">Tubb Precision Custom High-Performance Remington 700 Bolts <span class="video_runtime">(6:57)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/YILG6QQisd0/3.jpg"></div><div class="video_scroll_info">CS AR-15, AR-10, SR-25, DPMS &amp; T2K Magazine Springs <span class="video_runtime">(3:19)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/G7OI84jDe0M/3.jpg"></div><div class="video_scroll_info">CS M1A / M14 Op Rod &amp; Hammer Springs <span class="video_runtime">(1:35)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/lZQUYGbGmr4/3.jpg"></div><div class="video_scroll_info">CS AR-15, AR-10 &amp; SR-25 Flatwire Buffer Springs <span class="video_runtime">(4:21)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/E0OzqTYKIio/3.jpg"></div><div class="video_scroll_info">CS Firing Pin Springs <span class="video_runtime">(1:52)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/np4Dl4R8CcU/3.jpg"></div><div class="video_scroll_info">CS AR-15 National Match &amp; Standard Hammer &amp; Trigger Spring Sets <span class="video_runtime">(2:13)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/3Qn-ibBi0KQ/3.jpg"></div><div class="video_scroll_info">Tubb Precision 4-way Adjustable Butt Assembly <span class="video_runtime">(1:53)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/u4dxFcgfwHg/3.jpg"></div><div class="video_scroll_info">CS AR-15 Extractor &amp; Ejector Springs <span class="video_runtime">(2:37)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/1FF8YmvvlKo/3.jpg"></div><div class="video_scroll_info">Books by David Tubb <span class="video_runtime">(1:16)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/aW_gFnkfGNs/3.jpg"></div><div class="video_scroll_info">Custom Bolt Knobs for Tubb Precision Rem 700 Bolts <span class="video_runtime">(0:36)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/oq3iAoDz3jI/3.jpg"></div><div class="video_scroll_info">DTAC 6mm 115gr Boron Nitride Coated Bullets <span class="video_runtime">(3:27)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/7pVaQ7j_fQ4/3.jpg"></div><div class="video_scroll_info">Tubb Precision Bipod Spud, Forend Weight &amp; Modified Versa-Pod <span class="video_runtime">(3:11)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/jltZP8qwkTs/3.jpg"></div><div class="video_scroll_info">Tubb Precision AR15 / AR-10 Grips <span class="video_runtime">(6:51)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/hjnD3Y-UlAw/3.jpg"></div><div class="video_scroll_info">Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb <span class="video_runtime">(5:36)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/pGHFx4EYa7I/3.jpg"></div><div class="video_scroll_info">Tubb Precision AR 15 Left Hand Grip <span class="video_runtime">(0:34)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/ECUcIeak7CM/3.jpg"></div><div class="video_scroll_info">Tubb Precision 6XC Custom Sizing and Seating Dies <span class="video_runtime">(6:32)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/S9L60WEiEIg/3.jpg"></div><div class="video_scroll_info">DTAC .308 &amp; 6XC Precision Loaded Ammo <span class="video_runtime">(2:27)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/yQ_iuCI7xYs/3.jpg"></div><div class="video_scroll_info">Modern Match Rifle <span class="video_runtime">(3:42)</span></div></div><div class="video_container"><div class="video_scroll_thumb"><img src="http://i.ytimg.com/vi/mP2hg0CwEJY/3.jpg"></div><div class="video_scroll_info">The Tubb 2000 (T2K) <span class="video_runtime">(4:44)</span></div></div></div>
+					</div>
+				  <div class="scrollbar" style="height: 439px;"><div class="track" style="height: 439px;"><div class="thumb" style="top: 73px; height: 204px;"><div class="end"></div></div></div>
+				  </div>
+				</div>
+			</div>
+			
+		</div>
+	
+	</div>
+</div>
+            
+	<div data-bind='var: profile(zoovy:about); format:wiki; wikiFormats:myRIA;' id='videosContent'></div>
+	</div>
+    <script type="text/javascript">
+   $("#top").click(function (){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $("#clicktojump").offset().top
+                     });
+            //});
+        });
+ $("#top1").click(function (){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $("#clicktojump").offset().top
+                     });
+            //});
+        });		
+   $("#top2").click(function (){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $("#clicktojump").offset().top
+                     });
+            //});
+        });
+   $("#top3").click(function (){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $("#clicktojump").offset().top
+                     });
+            //});
+        });
+  $("#top4").click(function (){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $("#clicktojump").offset().top
+                     });
+            //});
+        });		
+	 $("#top5").click(function (){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $("#clicktojump").offset().top
+                     });
+            //});
+        });					
+   </script>
       <div id='product_infoArticle' class='displayNone textContentArea'>
         <h1>Product Information</h1>
         <div class="pd16 fs13">
@@ -627,12 +749,12 @@ if you change these, you should move them above this comment so that when you (o
           <div id="clicktojump">
             <div id="clicktojump_text">Click a link to jump to a section</div>
             <div id="clicktojump_links_cont">
-              <div class="clicktojump_links"><a onClick="goToByScroll('dtac','slow')" class="clicktojump_a" href="javascript:;"><img src="images/dtac_logo_100.jpg"></a></div>
-              <div class="clicktojump_links"><a onClick="goToByScroll('sss','slow')" class="clicktojump_a" href="javascript:;"><img src="images/sss_text_logo100.jpg"></a></div>
-              <div class="clicktojump_links"><a onClick="goToByScroll('ff','slow')" class="clicktojump_a" href="javascript:;"><img src="images/fflogo100.gif"></a></div>
-              <div class="clicktojump_links"><a onClick="goToByScroll('sls','slow')" class="clicktojump_a" href="javascript:;"><img src="images/sl_logo_red100.jpg"></a></div>
-              <div class="clicktojump_links"><a onClick="goToByScroll('ar','slow')" class="clicktojump_a" href="javascript:;"><img src="images/ar_page_logo100.jpg"></a></div>
-              <div class="clicktojump_links"><a onClick="goToByScroll('t2k','slow')" class="clicktojump_a" href="javascript:;"><img src="images/2000_logo_100.jpg"></a></div>
+              <div class="clicktojump_links"><a onClick="goToByScroll('dtac','slow')" class="clicktojump_a" href="#dtac"><img src="images/dtac_logo_100.jpg"></a></div>
+              <div class="clicktojump_links"><a onClick="goToByScroll('sss','slow')" class="clicktojump_a"  href="#sss"><img src="images/sss_text_logo100.jpg"></a></div>
+              <div class="clicktojump_links"><a onClick="goToByScroll('ff','slow')" class="clicktojump_a" href="#ff"><img src="images/fflogo100.gif"></a></div>
+              <div class="clicktojump_links"><a onClick="goToByScroll('sls','slow')" class="clicktojump_a" href="#sls"><img src="images/sl_logo_red100.jpg"></a></div>
+              <div class="clicktojump_links"><a onClick="goToByScroll('ar','slow')" class="clicktojump_a" href="#ar"><img src="images/ar_page_logo100.jpg"></a></div>
+              <div class="clicktojump_links"><a onClick="goToByScroll('t2k','slow')" class="clicktojump_a" href="#t2k"><img src="images/2000_logo_100.jpg"></a></div>
             </div>
           </div>
           <br>
@@ -643,7 +765,7 @@ if you change these, you should move them above this comment so that when you (o
           <br>
           <div id="dtac" class="pdf_container">
             <div class="pdf_list_header"><img src="images/dtac_logo_100.jpg">
-              <div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div>
+              <div class="uparrow"><a class="goToTopArrow" id="top" href="#top"><img src="images/uparrow.png"></a></div>
             </div>
             <div class="pdf_list_header2"></div>
             <br>
@@ -665,7 +787,7 @@ if you change these, you should move them above this comment so that when you (o
           </div>
           <div id="sss" class="pdf_container">
             <div class="pdf_list_header"><img src="images/sss_text_logo100.jpg">
-              <div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div>
+              <div class="uparrow"><a class="goToTopArrow" id="top1" href="#top"><img src="images/uparrow.png"></a></div>
             </div>
             <div class="pdf_list_header2"></div>
             <br>
@@ -689,7 +811,7 @@ if you change these, you should move them above this comment so that when you (o
           </div>
           <div id="ff" class="pdf_container">
             <div class="pdf_list_header"><img src="images/fflogo100.gif">
-              <div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div>
+              <div class="uparrow"><a class="goToTopArrow" id="top2"  href="#top"><img src="images/uparrow.png"></a></div>
             </div>
             <div class="pdf_list_header2"></div>
             <br>
@@ -715,7 +837,7 @@ if you change these, you should move them above this comment so that when you (o
           </div>
           <div id="sls" class="pdf_container">
             <div class="pdf_list_header"><img src="images/sl_logo_red100.jpg">
-              <div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div>
+              <div class="uparrow"><a class="goToTopArrow" id="top3"  href="#top"><img src="images/uparrow.png"></a></div>
             </div>
             <div class="pdf_list_header2"></div>
             <br>
@@ -737,7 +859,7 @@ if you change these, you should move them above this comment so that when you (o
           </div>
           <div id="ar" class="pdf_container">
             <div class="pdf_list_header"><img src="images/ar_page_logo100.jpg">
-              <div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div>
+              <div class="uparrow"><a class="goToTopArrow" id="top4" href="#top"><img src="images/uparrow.png"></a></div>
             </div>
             <div class="pdf_list_header2"></div>
             <br>
@@ -767,7 +889,7 @@ if you change these, you should move them above this comment so that when you (o
           </div>
           <div id="t2k" class="pdf_container">
             <div class="pdf_list_header"><img src="images/2000_logo_100.jpg">
-              <div class="uparrow"><a class="goToTopArrow" href="javascript:;"><img src="images/uparrow.png"></a></div>
+              <div class="uparrow"><a class="goToTopArrow" id="top5" href="#top"><img src="images/uparrow.png"></a></div>
             </div>
             <div class="pdf_list_header2"></div>
             <br>
