@@ -94,6 +94,8 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
   <!-- VIEW CONTENT -->
   <!-- leave the appView div, put your your html here ...  -->
   <div class="wrapper">
+   <div id='globalMessaging' class='appMessaging'></div>
+
     <!--Header Start -->
     <div class="header">
       <div class="headertop">
@@ -165,8 +167,8 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
       </form>
       <!-- Responsive Menu -->
     </div>
-    <!--Header Start -->
-    <div id='globalMessaging' class='appMessaging'></div>
+    <!--Header Close -->
+    
     <!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
     <!-- These add specific functionality for the app. In most cases, you want to leave them alone. -->
     <!--
@@ -185,33 +187,33 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
       <div class="footertop">
         <ul class="fotfirstu">
           <h1>CUSTOMER SERVICE</h1>
-          <li><a href="#.">Frequently Asked Questions</a></li>
-          <li><a href="#.">Return Policy</a></li>
-          <li><a href="#.">Sitemap</a></li>
+          <li><a href="#" onClick="return showContent('company',{'show':'faq'});">Frequently Asked Questions</a></li>
+          <li><a href="#" onClick="return showContent('company',{'show':'return'});">Return Policy</a></li>
+          <li><a href="#" onClick="return showContent('company',{'show':'sitemap'});">Sitemap</a></li>
         </ul>
         <ul>
           <h1>CONTACT US</h1>
-          <li><a href="#.">Contact Us</a></li>
-          <li><a href="#.">Customer Feedback</a></li>
+          <li><a href="#" onClick="return showContent('company',{'show':'contact'});">Contact Us</a></li>
+          <li><a href="#" onClick="return showContent('company',{'show':'customerfeedback'});">Customer Feedback</a></li>
         </ul>
         <ul>
           <h1>MY ACCOUNT</h1>
-          <li><a href="#.">Log In</a></li>
-          <li><a href="#.">Manage Your Account</a></li>
-          <li><a href="#.">Gift Certificates</a></li>
+          <li><a href="#" onClick="return showContent('customer',{'show':'myaccount'});">Log In</a></li>
+          <li><a href="#" onClick="return showContent('customer',{'show':'myaccount'});">Manage Your Account</a></li>
+          <li><a href="#" onClick="return showContent('company',{'show':'giftcertificates'});">Gift Certificates</a></li>
         </ul>
         <ul>
           <h1>ABOUT US</h1>
-          <li><a href="#.">Privacy & Security</a></li>
-          <li><a href="#.">Terms & Conditions</a></li>
-          <li><a href="#.">Legal Information</a></li>
-          <li><a href="#.">Email Sign Up</a></li>
+          <li><a href="#" onClick="return showContent('customer',{'show':'privacy'});">Privacy & Security</a></li>
+          <li><a href="#" onClick="return showContent('customer',{'show':'termsconditions'});">Terms & Conditions</a></li>
+          <li><a href="#" onClick="return showContent('customer',{'show':'legalinformation'});">Legal Information</a></li>
+          <li><a href="#" onClick="return showContent('customer',{'show':'emailsignup'});">Email Sign Up</a></li>
         </ul>
       </div>
       <div class="footerbot">
-        <div class="mcafee"><img src="images/mcafee.gif" alt="" /></div>
+        <div class="mcafee"><a href="https://www.mcafeesecure.com/RatingVerify?ref=www.davidtubb.com" target="_blank"><img src="images/mcafee.gif" alt="" border="0" /></a></div>
         <div class="copyright">&copy; Copyright Superior Shooting Systems, Inc.2013</div>
-        <div class="powerimg"><img src="images/poweredby.gif" alt="" /></div>
+        <div class="powerimg"><a href="http://www.sandiegomedia.com/" target="_blank"><img src="images/poweredby.gif" alt="" border="0" /></a></div>
       </div>
     </div>
   </div>
@@ -219,7 +221,7 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
 	** REMINDER : DO NOT PUT ANY GRAPHICS/CONTENT THAT SHOULD NOT APPEAR ON EVERY PAGE IN THE VIEW (HERE)
 	**				  INSTEAD PUT THEM INTO <div id="homepageTemplate"></div>
 	-->
-  <div id='globalMessaging' class='appMessaging'></div>
+  <!--<div id='globalMessaging' class='appMessaging'></div>-->
   <!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
   <!-- These add specific functionality for the app. In most cases, you want to leave them alone. -->
   <!--<div id='appNav'>
@@ -255,7 +257,7 @@ COMMONLY EDITED TEMPLATES
 the homepageTemplate template is loaded into mainContentArea by default when the application loads
 -->
   <div id='homepageTemplate' class='homeTemplate'>
-    <div class="middle">
+     <div class="middle">
       <div class="banner">
         <div id="slideshowContainer" class="clearfix marginBottom">
           <div id="slideshowNav"></div>
@@ -280,9 +282,9 @@ $("#tabs").tabs();
 </script>
       <div class="tabimg">
         <div id="tabs">
-          <ul class="botbotblack">
-            <li style="margin-left:8px;"><a href="#tabs-1">Videos</a></li>
-            <li><a href="#tabs-2">Articles</a></li>
+          <ul>
+            <li style="margin-left:8px; margin-top:2px;"><a href="#tabs-1">Videos</a></li>
+            <li style="margin-top:2px;"><a href="#tabs-2">Articles</a></li>
           </ul>
           <div id="tabs-1" class="tabconsection">
              <div class="tabproduct">
@@ -332,6 +334,8 @@ $("#tabs").tabs();
                 <h2>This article outlines six tenents he has followed throughout his career. As with any and all by David, it's must reading for any serious shooter.</h2>	
                     <p><a href="#.">>>Read</a></p>
             </div>
+            
+            <div class="morearticalv"><a href="#" onClick="return showContent('company',{'show':'article'});"><img src="images/more_articles.gif" border="0"></a></div>
              
              
              
@@ -483,6 +487,7 @@ this will likely become more flexible in the future. ###
   <div id='productTemplate' class='productPage'>
     <ul class='clearfix noPadOrMargin fluidList breadcrumb' data-bind='var: session(session.recentCategories.0); format:breadcrumb; extension:store_navcats; loadsTemplate: breadcrumbTemplate;'>
     </ul>
+    <div class="propage">
     <table class='prodViewerContainer'>
       <tr>
         <td class='imageContainer'><div onClick='app.ext.store_product.u.showPicsInModal({"pid":$(this).attr("data-pid")});' class='pointer clearfix'  data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'>
@@ -566,7 +571,7 @@ It's done this way because ID's hard coded into template are bad mojo (templates
     <div class='prodlistRelatedContainer'>
       <ul class='listStyleNone fluidList clearfix noPadOrMargin productList' data-bind="var: product(zoovy:related_products); format:productList; extension:store_prodlist;loadsTemplate:productListTemplate;hide_pagination:true;hide_summary:true; before:<h2>Similar Items</h2>; withReviews:1;">
       </ul>
-    </div>
+    </div></div>
   </div>
   <!-- productTemplate -->
   <!-- a template used for a quickview link off of a category page -->
@@ -612,23 +617,11 @@ if you change these, you should move them above this comment so that when you (o
   </ul>
   <!-- loadingBG needed on this for app init (content may take a moment to load) -->
   <div id='companyTemplate' class='clearfix loadingBG'>
-    <div class='sideline' >
-      <nav id='companyNav'>
-        <!--<ul class='listStyleNone noPadOrMargin'>
-	<li><a href='#company?show=about'>About Us</a></li>
-	<li><a href='#company?show=contact'>Contact Information</a></li>
-	<li><a href='#company?show=faq'>FAQ</a></li>
-	<li><a href='#company?show=payment'>Payment Policy</a></li>
-	<li><a href='#company?show=privacy'>Privacy Statement</a></li>
-	<li><a href='#company?show=return'>Return Policy</a></li>
-	<li><a href='#company?show=shipping'>Shipping Information</a></li>
-</ul>-->
-      </nav>
-    </div>
+    
     <div class='mainColumn'>
       <!-- .textContentArea is used as a selector in quickstart.js because article tag type isn't ie8 friendly -->
-      <div id='aboutArticle' class='textContentArea article'>
-        <h1>About David Tubb</h1>
+      <div id='aboutArticle' class='textContentArea article navpages'>
+        <h1 class="innertitle">About David Tubb</h1>
         <div data-bind='var: profile(zoovy:about); format:wiki; wikiFormats:myRIA;' id='aboutUsContent'>
           <div class="pd16 fs13">
             <div class="fr" style="padding-left:20px"> <img src="images/tcommain_lr.jpg" alt=""> </div>
@@ -657,10 +650,10 @@ if you change these, you should move them above this comment so that when you (o
           </div>
         </div>
       </div>
-      <div id='videosArticle' class='textContentArea article'>
+      <div id='videosArticle' class='textContentArea article navpages'>
+      <h1 class="innertitle">Videos</h1>
    <div id="pgbldr_container">
-	<div class="pgbldr_h1"><h1>Videos</h1></div>
-	<div class="pd16 tac">
+	<div style="margin-left:10px;">
 
 		<div id="video_content">
 		
@@ -741,8 +734,8 @@ if you change these, you should move them above this comment so that when you (o
             //});
         });					
    </script>
-      <div id='product_infoArticle' class='displayNone textContentArea'>
-        <h1>Product Information</h1>
+      <div id='product_infoArticle' class='displayNone textContentArea navpages'>
+        <h1 class="innertitle">Product Information</h1>
         <div class="pd16 fs13">
           <div id="product_info_txt"> For those who prefer to do their reading off-line, this page contains all product information and instruction downloads contained in the specific products pages elsewhere on this site. You will need Adobe Acrobat to view and print these downloads.<br>
           </div>
@@ -903,9 +896,9 @@ if you change these, you should move them above this comment so that when you (o
           </div>
         </div>
       </div>
-      <div id='articleArticle' class='displayNone textContentArea'>
-        <h1>Article</h1>
-        <div class="pd16"> <span style="font-weight:bold;font-size:14px;">I have a goal to share my knowledge with other shooters. I hope that some of these materials might help you get where you want to go as a shooter a little faster and easier.</span><br>
+      <div id='articleArticle' class='displayNone textContentArea navpages'>
+        <h1 class="innertitle">Article</h1>
+        <div class="pd16"> <span style="font-size:14px;">I have a goal to share my knowledge with other shooters. I hope that some of these materials might help you get where you want to go as a shooter a little faster and easier.</span><br>
           <br>
           <span style="font-size:10px;">"Click on any link below to view that specific product page. You'll also be able to download information, instructions, and specifications."</span> <img width="200" height="87" align="right" src="images/tubb_sig200.jpg"><br>
           <br>
@@ -991,11 +984,11 @@ if you change these, you should move them above this comment so that when you (o
           <br>
         </div>
       </div>
-      <div id='contactArticle' class='displayNone textContentArea'>
-        <h1>Contact Information</h1>
+      <div id='contactArticle' class='displayNone textContentArea conpage'>
+        <h1 class="innertitle">Contact Information</h1>
         <form action='#' onSubmit="app.calls.appSendMessage.init($(this).serializeJSON(),{'callback':'showMessaging','parentID':'contactFormMessaging','message':'Thank you, your message has been sent'},'immutable'); app.model.dispatchThis('immutable');  return false;" id='contactForm' name='contactForm'>
           <fieldset>
-          <legend>Contact Us</legend>
+          <legend><strong>Contact Us</strong></legend>
           <div id='contactFormMessaging'></div>
           <div>
             <label for='contactFormSender'>Email Address: </label>
@@ -1014,14 +1007,18 @@ if you change these, you should move them above this comment so that when you (o
             <textarea name='body' required='required' id='contactFormBody'></textarea>
           </div>
           <div class='alignRight'>
-            <input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all' value='Send Message' />
+            <input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all sendmess' value='Send Message' />
           </div>
           </fieldset>
         </form>
         <div data-bind='var: profile(zoovy:contact); format:wiki; wikiFormats:myRIA;' id='contactContent'></div>
+        <div class="ztitle2"><strong>Email:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:custsrvc@davidtubb.com">custsrvc@davidtubb.com</a></div>
+        <div class="ztitle2"><strong>Telephone:</strong>&nbsp;&nbsp;&nbsp;(806) 323-9488</div>
+        <div class="ztitle2"><strong>Address:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;800 N. Second St. Canadian, TX 79014</div>
+            
       </div>
-      <div id='faqArticle' class='displayNone textContentArea'>
-        <h1>Frequently Asked Questions</h1>
+      <div id='faqArticle' class='displayNone textContentArea navpages'>
+        <h1 class="innertitle">Frequently Asked Questions</h1>
         <div class="pd16"> <span style="font-size:18px;"><b>Table of Contents</b></span><br>
           <br>
           <ul class="list">
@@ -1090,7 +1087,29 @@ if you change these, you should move them above this comment so that when you (o
         </div>
         <div id='faqContent' class='loadingBG ui-accordion ui-widget ui-helper-reset ui-accordion-icons appAccordianesque'></div>
       </div>
-      <div class='displayNone textContentArea' id='paymentArticle'>
+      <div id='sitemapArticle' class='displayNone textContentArea navpages'>
+      	<h1 class="innertitle">Sitemap</h1>
+      </div>
+       <div id='giftcertificatesArticle' class='displayNone textContentArea navpages'>
+      	<h1 class="innertitle">Gift Certificates</h1>
+      </div>
+       <div id='customerfeedbackArticle' class='displayNone textContentArea navpages'>
+      	<h1 class="innertitle">Customer Feedback</h1>
+      </div>
+      
+      <div id='termsconditionsArticle' class='displayNone textContentArea navpages'>
+      	<h1 class="innertitle">Terms & Conditions</h1>
+      </div>
+      
+       <div id='legalinformationArticle' class='displayNone textContentArea navpages'>
+      	<h1 class="innertitle">Legal Information</h1>
+      </div>
+      
+       <div id='emailsignupArticle' class='displayNone textContentArea navpages'>
+      	<h1 class="innertitle">Email Sign Up</h1>
+      </div>
+        
+       <div class='displayNone textContentArea' id='paymentArticle'>
         <h1>Payment Policy</h1>
         <div data-bind='var: profile(zoovy:payment_policy); format:wiki; wikiFormats:myRIA;' id='paymentContent'></div>
       </div>
@@ -1121,8 +1140,8 @@ if you change these, you should move them above this comment so that when you (o
         <p>This site gives users the following options for changing and modifying information previously provided. Simply visit the customer login area of this website.</p>
         <!-- !!! load amendments here -->
       </div>
-      <div class='displayNone textContentArea' id='returnArticle'>
-        <h1>Return Policy</h1>
+      <div class='displayNone textContentArea navpages' id='returnArticle'>
+        <h1 class="innertitle">Return Policy</h1>
         <div data-bind='var: profile(zoovy:return_policy); format:wiki; wikiFormats:myRIA;' id='returnContent'></div>
       </div>
       <div class='displayNone textContentArea' id='shippingArticle'>
@@ -1133,8 +1152,8 @@ if you change these, you should move them above this comment so that when you (o
   </div>
   <!-- /companyTemplate -->
   <!-- loadingBG needed on this for app init (content may take a moment to load) -->
-  <div id='customerTemplate' class='clearfix'>
-    <div class='sideline' >
+  <div id='customerTemplate' class='clearfix navpages'>
+    <div class='sideline'>
       <nav id='customerNav'>
         <ul class='listStyleNone noPadOrMargin'>
           <!-- before restoring this, test cuz news form on left was causing some conflicts
@@ -1205,7 +1224,7 @@ subscribeListsArticle is used for authenticated buyers
               <input type='password' name='password2' id='changePassword2' size='35' />
             </div>
             <div class='marginBottom'>
-              <input type='submit' value='Change Password' class='loadingButton ui-button-text ui-button ui-state-default ui-corner-all'>
+              <input type='submit' value='Change Password' class='loadingButton ui-button-text ui-button ui-state-default ui-corner-all '>
             </div>
             </fieldset>
           </form>
@@ -1502,7 +1521,7 @@ The 'data-action' attribute is used to assign an onclick.
 <!-- /templates -->
 <div id='loginFormForModal' class='loginOption displayNone' title='Please log in'>
   <!-- the contents of this div/id are toggled on/off when login/logout occurs. don't change the ID -->
-  <p id='loginMessaging' class='marginBottom appMessaging'></p>
+  <p id='loginMessaging' class='marginBottom appMessaging'></p><br clear="all" />
   <div id='loginFormContainer'>
     <form action='#' onSubmit='app.ext.myRIA.u.loginFrmSubmit($("#modalLoginlogin").val(),$("#modalLoginpassword").val()); return false;' id='modalLoginForm'>
       <input type='hidden' name='loginCallback' id='loginCallback' value='' />
