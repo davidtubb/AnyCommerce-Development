@@ -339,10 +339,7 @@ class="video"><p><img src="images/tabpropic2.jpg" /></p></a>
             </div>
             
             <div class="morearticalv"><a href="#" onClick="return showContent('company',{'show':'article'});"><img src="images/more_articles.gif" border="0"></a></div>
-             
-             
-             
-             <div class="cb"></div>
+              <div class="cb"></div>
            </div>
         </div>
       </div>
@@ -368,14 +365,46 @@ don't modify the 'data-templateid' unless you are changing template names and up
   <div id='categoryTemplate' class='loadingBG categoryTemplate'>
     <ul class='breadcrumb clearfix noPadOrMargin fluidList' data-bind='var: category(id); format:breadcrumb; extension:store_navcats; loadsTemplate: breadcrumbTemplate;'>
     </ul>
-    <img data-bind="var: category(%page.banner1); format: banner; editor: banner; height:250; width:750; extension: myRIA;" src='images/blank.gif' alt='' />
+    
+  <!--  <img data-bind="var: category(%page.banner1); format: banner; editor: banner; height:250; width:750; extension: myRIA;" src='images/blank.gif' alt='' />
     <h2 data-bind="var: category(%page.header); format: text; editor: text;"></h2>
     <p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
     <ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'>
-    </ul>
+    </ul>-->
+    <div class="cattopbann">
+    	<div class="cattopbannL"><img src="images/catpictubb.gif" /></div>
+        <div class="cattopbannR"><img src="images/featured_img.gif" />
+<h1>224 FinalFinish + TMS Complete Care ProPack</h1>
+<h2>Price: <span>$62.99</span></h2>
+        </div>
+    </div><br clear="all"><br clear="all">
+    
     <!-- outputs a list of subcategories -->
-    <ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 9;" class='listStyleNone fluidList clearfix feaprobox productList'>
+     <script>
+$("#tabs1").tabs();
+</script>
+    <div class="cattab">
+    <div id="tabs1">
+      <ul>
+        <li style="margin-left:8px;"><a href="#tabs-1">Best Sellers</a></li>
+        <li><a href="#tabs-2">Price - Low to High</a></li>
+        <li><a href="#tabs-3">Price - High to Low</a></li>
+      </ul>
+       <div id="tabs-1" class="tabconsection">
+         <ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 9;" class='listStyleNone fluidList clearfix feaprobox productList'>
     </ul>
+       </div>
+       
+       <div id="tabs-2" class="tabconsection">
+       two
+       </div>
+       
+       <div id="tabs-3" class="tabconsection">
+       Three
+       </div>
+     </div>
+</div>
+  
     <!-- outputs the product list -->
     <p data-bind="var: category(%page.description2); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
   </div>
@@ -1250,7 +1279,7 @@ subscribeListsArticle is used for authenticated buyers
   <div id='searchTemplate' class='searchResultsPage clearfix'>
     <!-- the div is use to show a detailed view of a product. should be hidden by default. -->
     <div class='previewProductDetail displayNone'></div>
-    <div class='previewListContainer'>
+    <div class='previewListContainer navpages'>
       <!-- productListTemplateResults gets loaded into here -->
       <ul id='resultsProductListContainer' class='listStyleNone fluidList noPadOrMargin productList'>
       </ul>
