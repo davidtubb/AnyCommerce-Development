@@ -930,6 +930,8 @@ progress::-moz-progress-bar{background: none repeat scroll 0 0 #920505;}
 
  
 .homefeapro{padding:0; margin:0; max-width:809px; float:right;}
+
+
 .feaprobox {margin:0 0 10px 10px; padding:0px;}
 .feaprobox > li{border:1px solid #CCCCCC; min-height:280px; padding:10px; max-width:167px; width:100%; background:#FFF; text-align:center; margin:0 10px 10px 0;}
 .feaprobox > li > form button{margin-top:20px;}
