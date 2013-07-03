@@ -195,7 +195,7 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
         <ul>
           <h1>CONTACT US</h1>
           <li><a href="#" onClick="return showContent('company',{'show':'contact'});">Contact Us</a></li>
-          <li><a href="#" onClick="return showContent('company',{'show':'customerfeedback'});">Customer Feedback</a></li>
+          <li><a href="#" onClick="return showContent('customer',{'show':'customerfeedback'});">Customer Feedback</a></li>
         </ul>
         <ul>
           <h1>MY ACCOUNT</h1>
@@ -1385,16 +1385,99 @@ if you change these, you should move them above this comment so that when you (o
       </div>
       <div id='giftcertificatesArticle' class='displayNone textContentArea footerpage'>
         <h1 class="innertitle">Gift Certificates</h1>
+        <form method="post" action="https://www.davidtubb.com/cgi-bin/tubb.pl"><input type="HIDDEN" value="max_giftcert" name="pgm"><input type="HIDDEN" value="shopcart" name="wnname"><input type="HIDDEN" value="00" name="sesent"><input type="hidden" value="141" name="strfnbr"><input type="HIDDEN" value="159" name="prrfnbr"><input type="HIDDEN" value="39" name="carfnbr"><input type="HIDDEN" value="add" name="mode"><input type="HIDDEN" value="cart" name="mode2"><input type="HIDDEN" value="2" name="log"><input type="HIDDEN" value="giftcertco" name="page">
+		<input type="hidden" value="" name="search_id">
+		<input type="hidden" value="" name="clicked_product">
+		<input type="hidden" value="" name="child">
+		<table cellspacing="0" cellpadding="0" border="0" class="giftbox">
+			
+			<tbody><tr>
+				<td valign="top" style="padding-top:10px;">
+				<span class="certhdr">PERSONALIZE</span><br>
+				<span class="certdesc">Enter the information below to personalize your David Tubb eGift certificate.</span><br><br>
+
+				<span class="certtexttitle">Recipient's Name:</span><span class="certtextfield"><input type="text" style="width:280px;" value="" maxlength="30" name="name"></span>
+				<div style="clear:both;height:10px;"></div>
+				<span class="certtexttitle">Recipient's E-Mail Address:</span><span class="certtextfield"><input type="text" style="width:280px;" value="" maxlength="50" name="email"><span style="display:block;padding-top:5px;">(Certificates are emailed to recipients)</span></span>
+				<div style="clear:both;height:10px;"></div>
+				<span class="certtexttitle">From:</span><span class="certtextfield"><input type="text" style="width:280px;" value="" maxlength="30" name="from"></span>
+				<div style="clear:both;height:10px;"></div>
+				<span class="certtexttitle">Your Message:<br><span style="font-weight:normal;font-size:11px;">(Max 255 characters.)</span></span><span class="certtextfield"><textarea style="width:280px;height:110px;" maxlength="600" name="message"></textarea></span>
+				<br><div style="margin-left:350px" class="cb"><br><a class="btn grey fs16" id="submit_btn1" style="cursor: pointer;"><i></i><span><i></i><span></span>Place Order</span></a></div>
+				<div style="clear:both;height:10px;"></div>
+				<div class="certprld3">
+				<ul>
+<li>David Tubb gift certificates can be used only for online orders from David Tubb's website. Recipient receives an email certificate only. No physical certificates will be mailed.
+</li><li>Purchases exceeding the value of the gift certificate will require payment for balance due.
+</li><li>David Tubb is not responsible for accidentally deleted gift certificate emails, or for stolen gift certificate codes.
+</li></ul>
+				</div>
+				</td>
+				<td valign="top" style="padding-top:10px;">
+				<span class="certhdr">CUSTOMIZE</span><br>
+				<span class="certdesc">Choose a design and amount for your gift certificate.</span><br><br>
+				<div class="certpics bold">
+					
+<div class="attr-radio-thumb" id="attr-box2">
+<div class="attr-individual">
+<div class="radio-bttn"><input type="radio" checked="" onclick="retrieveChildStockPrice();" value="David Tubb" name="pratt2"></div>
+<div class="attr-img"><img border="0" onclick="updateAttributeOption(document.addform.pratt2, 'David Tubb');" src="http://www.davidtubb.com/davidtubb/content/images_inv/w/p/161/GiftCertificate1_thumb.jpg"></div>
+<script type="text/javascript">
+
+</script>
+<div class="attr-info">David Tubb</div>
+</div>
+</div>
+
+					<div style="padding:0px 0px 0px 35px;clear:both;"><b>Amount:</b><br>
+					
+<div class="attr-dropdown" id="attr-box1">
+<select onchange="retrieveChildStockPrice();" id="pratt1" name="pratt1"><option value="$100.00"> $100.00  </option>
+<option value="$150.00"> $150.00  </option>
+<option value="$200.00"> $200.00  </option>
+<option value="$25.00"> $25.00  </option>
+<option selected="" value="$50.00"> $50.00  </option>
+</select>
+</div>
+
+					</div>
+
+				</div>
+				</td>
+			</tr>
+		</tbody></table>
+		</form>
       </div>
-      <div id='customerfeedbackArticle' class='displayNone textContentArea footerpage'>
-        <h1 class="innertitle">Customer Feedback</h1>
-      </div>
+      
       <div class='displayNone textContentArea' id='paymentArticle'>
         <h1>Payment Policy</h1>
         <div data-bind='var: profile(zoovy:payment_policy); format:wiki; wikiFormats:myRIA;' id='paymentContent'></div>
       </div>
       <div class='displayNone textContentArea footerpage' id='returnArticle'>
         <h1 class="innertitle">Return Policy</h1>
+        <div class="pd16">
+		Everyone at Superior Shooting Systems, Inc. and DavidTubb.com is committed to providing you with precision built quality products and a rewarding shopping experience. Our products are extensively field-tested and manufactured to exacting tolerances and specifications, and we are constantly designing new and unique items to help you improve and enjoy your shooting activities. Customer satisfaction is our primary mission, and we want to earn your continued patronage. We are grateful for our many long-term customers, as you make our success possible.<br><br>
+		
+		If for any reason you are not satisfied with a product purchased it may be returned within 60 days of purchase with the original sales receipt. The item must be returned in its original packaging and with all accompanying manuals and accessories.<br><br>
+		
+		<b>Credit Card Refunds</b><br><br>
+		
+		All credit card purchases will be refunded back to the original credit card that the merchandise was purchased on. In the event there is no receipt showing credit card fund transfer or the credit card is not available to credit, the refund will be issued by either store credit or check at the discretion of Superior Shooting Systems Inc.<br><br>
+		
+		<b>Check Refunds</b><br><br>
+		
+		All check purchases will be refunded 10 business days after the original check has cleared; check refunds will be done in the form of a mailed check.<br><br>
+		
+		The following conditions are not acceptable for return<br><br>
+		<ul class="list">
+			<li>Any part that exhibits physical damage</li>
+			<li>Any part that has been modified or fitted</li>
+			<li>Any part that is returned without its original packaging</li> 
+			<li>Loaded ammunition may not be returned due to safety considerations</li>
+		</ul><br><br>
+
+		If you receive a shipment that has a problem please call 806-323-9488 as soon as possible. Both Superior Shooting Systems Inc. and DavidTubb.com employees will do all we can to remedy the problem.
+	</div>
         <div data-bind='var: profile(zoovy:return_policy); format:wiki; wikiFormats:myRIA;' id='returnContent'></div>
       </div>
       <div class='displayNone textContentArea' id='shippingArticle'>
@@ -1403,9 +1486,32 @@ if you change these, you should move them above this comment so that when you (o
       </div>
       <div id='termsconditionsArticle' class='displayNone textContentArea footerpage'>
         <h1 class="innertitle">Terms & Conditions</h1>
+        <div class="pd16">
+        <span style="font-weight:bold;font-size:14px;">Conditions of Sale and Warranty</span><br><br>
+
+		Products are sold on an as-is, where-is basis and Superior Shooting Systems Inc. makes no, and hereby disclaims any, representation or warranty (other than title), whether oral or written or expressed or implied, in respect of these products including, without limitation, the warranties of merchantability and fitness for a particular purpose. Superior Shooting Systems Inc. shall not be responsible for, and by acceptance of this product purchaser agrees to defend, indemnify and hold Superior Shooting Systems Inc. harmless from, any and all claims, liabilities, damages, demands, costs and expenses (whether direct, indirect or consequential) relating to use of these products by purchaser or any third party.<br><br>
+		
+		Prices and specifications are subject to change without notice.<br><br>
+
+		Shipping: Actual shipping charges may vary from those quoted on internet orders due to actual weight, size and destination charges. Occassional handling charges may apply.<br><br>
+		
+		<span style="font-weight:bold;font-size:14px;">PLEASE NOTE***</span><br><br>
+
+		Superior Shooting Systems Inc. does not warrant that a person may legally purchase, possess or carry specific items offered on this site according to federal, state, or local laws. Before ordering any, knives, bullets, powder, primers, loaded ammunition and long gun and handgun components. *LOADED AMMO FOR USA SALE ONLY &amp; MUST SHIP BY UPS<br><br>
+
+		<span style="font-weight:bold;font-size:14px;">KNOW YOUR FEDERAL, STATE, AND LOCAL LAWS.</span> You must be of legal age to purchase the items listed above and be under no legal disability. A person placing an order for such items on this site warrants that he or she is an adult and is under no legal restrictions which would prohibit such person from ordering, owning, possessing, or transferring these items under law. Further, these items cannot be sold to minors, convicted felons, those convicted of a misdemeanor crime of domestic abuse or those chemically dependent.
+	</div>
       </div>
       <div id='legalinformationArticle' class='displayNone textContentArea footerpage'>
         <h1 class="innertitle">Legal Information</h1>
+        <div class="pd16">
+        Superior Shooting Systems Inc. was founded in 2000 to integrate several product lines under one name. Headed by David Tubb, Superior Shooting Systems Inc. is the parent company for the former SpeedLock Systems, FinalFinish, and Moly Coatings Inc. products and services.<br><br>
+
+		The items you'll see on this site represent only the current collection of SSS Inc. products. New items are added continually, and we expect a significant number of new and innovative solutions to emerge over the next several months.<br><br>
+
+		Superior Shooting Systems Inc. can be reached by phone during business hours<br>
+		[9:00 am to 4:30 pm Monday-Friday]
+	</div>
       </div>
       <div class='displayNone textContentArea privacpage' id='privacyArticle'>
         <h1 class="innertitle">Privacy Statement</h1>
@@ -1439,8 +1545,88 @@ if you change these, you should move them above this comment so that when you (o
   <!-- /companyTemplate -->
   <!-- loadingBG needed on this for app init (content may take a moment to load) -->
   <div id='customerTemplate' class='clearfix '>
+  <div id='customerfeedbackArticle' class='displayNone textContentArea footerpage'>
+        <h1 class="innertitle">Customer Feedback</h1>
+        <div class="pd16">
+<form name="CustomerFeedback" action="http://www.davidtubb.com/cgi-bin/tubb.pl" method="post" onsubmit="return validate_this('CustomerFeedback');">
+    <input type="hidden" value="CustomerFeedback" name="form_definition"> <input type="hidden" value="survey_in" name="pgm"> <input type="hidden" value="process" name="func"> <input type="hidden" value="0,0" name="sesent"> <input type="hidden" value="141" name="strfnbr"> <input type="hidden" name="carfnbr"> <input type="hidden" name="storfnbr"> <input type="hidden" value="Customer Feedback Sent" name="pgname"> <input type="hidden" value="maxform_customerfeedback_client" name="emname">
+    <table cellspacing="0" cellpadding="5" border="0">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                <p style="padding-bottom: 16px; width: 600px" class="fs13">Thank you for visiting David Tubb. We will continue to offer the very best service and&nbsp;provide you with the absolute best products. We will be continually updating our site with new items and would like to offer everything you're looking for. If you have any suggestions or other comments about the site we would appreciate your input.</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="60" height="22">
+                <div class="bold tar mr10">Name:</div>
+                </td>
+                <td><input type="hidden" value="R,T:::First Name" name="q1"><input type="text" name="a1" style="background-color: #ffffa0; width: 250px" maxlength="30" title="Your Google Toolbar can fill this in for you. Select AutoFill"><br>
+                &nbsp;</td>
+            </tr>
+            <tr>
+                <td height="22">
+                <div class="bold tar mr10">E-mail:</div>
+                </td>
+                <td><input type="hidden" value="R,T:::Email Address" name="q11"><input type="text" name="a11" style="background-color: #ffffa0; width: 250px" maxlength="50" title="Your Google Toolbar can fill this in for you. Select AutoFill"><br>
+                &nbsp;</td>
+            </tr>
+            <tr>
+                <td height="22">
+                <div class="bold tar mr10">Phone:</div>
+                </td>
+                <td><input type="hidden" value="R,T:::adarea" name="q3"><input type="text" name="a3" style="background-color: #ffffa0; width: 50px" maxlength="3" title="Your Google Toolbar can fill this in for you. Select AutoFill">&nbsp;&nbsp;<input type="hidden" value="R,T:::adphone" name="q4"><input type="text" name="a4" style="background-color: #ffffa0; width: 120px" maxlength="12" title="Your Google Toolbar can fill this in for you. Select AutoFill"><br>
+                &nbsp;</td>
+            </tr>
+            <tr>
+                <td height="22">
+                <div class="bold tar mr10">Subject:</div>
+                </td>
+                <td><input type="hidden" value="R,S:::Subject" name="q13"> <select name="a13">
+                <option selected="" value="I can't find the product I'm looking for!">I can't find the product I'm looking for!</option>
+				<option value="I have a suggestion to make your website better.">I have a suggestion to make your website better.</option>
+				<option value="I have a comment about your new website design.">I have a comment about your new website design.</option>
+				<option value="I found a link that is broken or goes to the wrong place.">I found a link that is broken or goes to the wrong place.</option>
+				<option value="I have a question about my order.">I have a question about my order.</option>
+				<option value="I have a suggestion for a new video!">I have a suggestion for a new video!</option>
+				<option value="I want to send you money for no reason!">I want to send you money for no reason!</option>
+				<option value="I have a technical question.">I have a technical question.</option>
+                </select> <br>
+                &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="vat">
+                <div class="bold tar mr10 vat">Comment:</div>
+                </td>
+                <td><input type="hidden" value="R,A:::Comment" name="q12"><textarea name="a12" style="width: 350px" onkeyup="textLimit(this, 2045);" cols="60" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td height="40" class="vab"><input type="image" src="/davidtubb/content/templates/common/images/bttn_submit.jpg"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+</div>
+      </div>
     <div id='emailsignupArticle' class='displayNone textContentArea footerpage'>
       <h1 class="innertitle">Email Sign Up</h1>
+      <div id='subscribeFormTemplate'>
+    <form action='#' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe($(this)); return false">
+      <fieldset class='userInfo borderNone'>
+      <div>
+        <input type='email' placeholder='email address' maxlength='50' size='30' required='required' name='login' value='' />
+      </div>
+      <div>
+        <input type='text' placeholder='full name' maxlength='50' size='30' required='required' name='fullname' value='' />
+      </div>
+      </fieldset>
+      <fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'>
+      </fieldset>
+      <input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all' value='Subscribe' />
+    </form>
+  </div>
+      
     </div>
     <!--<div class='sideline'>
       <nav id='customerNav'>
