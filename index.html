@@ -179,7 +179,7 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
         <ul>
           <h1>CONTACT US</h1>
           <li><a href="#" onClick="return showContent('company',{'show':'contact'});">Contact Us</a></li>
-          <li><a href="#" onClick="return showContent('customer',{'show':'customerfeedback'});">Customer Feedback</a></li>
+          <li><a href="#" onClick="return showContent('customer',{'show':'customerfeed'});">Customer Feedback</a></li>
         </ul>
         <ul>
           <h1>MY ACCOUNT</h1>
@@ -1373,7 +1373,7 @@ if you change these, you should move them above this comment so that when you (o
             <h2>CONTACT US</h2>
             <ul>
                 <li><a href="#" onClick="return showContent('company',{'show':'contact'});">Contact Us</a></li>
-                <li><a href="#" onClick="return showContent('customer',{'show':'customerfeedback'});">Customer Feedback</a></li>
+                <li><a href="#" onClick="return showContent('customer',{'show':'customerfeed'});">Customer Feedback</a></li>
             </ul>
          </div>
          
@@ -1622,7 +1622,7 @@ an email certificate only. No physical certificates will be mailed. </li>
   <!-- /companyTemplate -->
   <!-- loadingBG needed on this for app init (content may take a moment to load) -->
   <div id='customerTemplate' class='clearfix '>
-    <div id='customerfeedbackArticle' class='displayNone textContentArea footerpage'>
+    <div id='customerfeedArticle' class='displayNone textContentArea footerpage'>
       <h1 class="innertitle">Customer Feedback</h1>
       <br>
       <div style="float:right; position:relative; top:50px; right:50px;"><img src="images/custumer_feedback.jpg" /></div>
@@ -1662,7 +1662,7 @@ an email certificate only. No physical certificates will be mailed. </li>
                   <input type="text" name="a3" style=" border:1px solid #CCCCCC; width:120px; padding:2px;" maxlength="3" title="Your Google Toolbar can fill this in for you. Select AutoFill">
                   &nbsp;&nbsp;
                   <input type="hidden" value="R,T:::adphone" name="q4">
-                  <input type="text" name="a4" style="border:1px solid #CCCCCC; width:248px; padding:2px;" maxlength="12" title="Your Google Toolbar can fill this in for you. Select AutoFill">
+                  <input type="text" name="a4" style="border:1px solid #CCCCCC; width:242px; padding:2px;" maxlength="12" title="Your Google Toolbar can fill this in for you. Select AutoFill">
                   <br>
                   &nbsp;</td>
               </tr>
@@ -1703,7 +1703,7 @@ an email certificate only. No physical certificates will be mailed. </li>
 Join the David Tubb e-mail list - a convenient way to receive updates and exclusive discount offers on products from David Tubb. Once you've signed up for the service, you'll hear from us a few times a month.<br>
 <br>
 Do you want to unsubscribe? We make that easy too. Just click on the unsubscribe link at the bottom of the email and you’ll automatically be removed from the list. And to make it even better, we do not sell or share our list with anyone, ever.</div>
-      <div id='subscribeFormTemplate' class="emailsignbox">
+      <div id='subscribeFormTemplate' class="emailsignbocustomerfeedx">
         <form action='#' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe($(this)); return false">
           <fieldset class='userInfo borderNone' style="margin:0px; padding:0px;">
           <div>
