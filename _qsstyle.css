@@ -1663,7 +1663,7 @@ img {
 	max-width:1000px;
 	width:100%;
 	float:left;
-	min-height:53px;
+	min-height:30px;
 }
 .mcafee {
 	margin:10px 0 0 67px;
@@ -1671,8 +1671,8 @@ img {
 	float:left;
 }
 .copyright {
-	margin:18px 0 0 178px;
-	padding:0px;
+	margin-left:36%;
+	padding:6px 0px;
 	font-size:12px;
 	color:#5c5c5c;
 	font-weight:bold;
