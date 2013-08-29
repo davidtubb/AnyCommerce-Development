@@ -1,5 +1,6 @@
 body, html {
 	font-size:100%;
+	font-family: 'Aldrich', sans-serif;
 }
 #appTemplates {
 	display:none;
@@ -2358,7 +2359,6 @@ background: none repeat scroll 0 0 #920505;
 	color:#A52A25;
 	text-decoration:underline;
 	font-size:12px;
-	font-family:'MyriadProRegular';
 	font-weight:normal;
 	margin:6px 0 0 0;
 }
