@@ -19,15 +19,15 @@ note - wait should only be used in cases where the entire template is being relo
 note - background- are use instead of background in case element this is applied to has a bgcolor and it's !important. (like a modal parent)
 */
 .loadingBG {
-	background-image:url(loading.gif) !important;
-	background-repeat: no-repeat !important;
+	background-image:url(loading.gif);
+	background-repeat: no-repeat ;
 	background-position:center center;
-	min-height:100px !important;
+	min-height:100px ;
 	min-width:100px;
 }
 li.loadingBG, .wait {
-	background:url(wait.gif) no-repeat top center !important;
-	min-height:20px !important;
+	background:url(wait.gif) no-repeat top center;
+	min-height:20px ;
 	min-width:20px;
 }
 span.wait {
@@ -44,7 +44,7 @@ button {
 	display:inline-block;
 	margin:0;
 	padding:0;
-	cursor:pointer !important;
+	cursor:pointer;
 }
 p {
 	margin-bottom:12px;
