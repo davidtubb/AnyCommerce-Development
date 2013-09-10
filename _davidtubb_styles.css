@@ -805,7 +805,6 @@ CART
 .cartZipCodeContainer, .cartAltButtonsContainer, .cartSummaryContainer {
 	margin-bottom:12px;
 	padding-bottom:12px;
-	border-bottom:1px dotted #efefef;
 }
 .cartStuffContainer {
 	width:60%;
