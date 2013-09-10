@@ -104,38 +104,34 @@ app.u.loadScript(app.vars.baseURL+"app-quickstart-init.js");
           </div>
         </div>
       </div>
-      <div class="nav">
+      <div class="nav ddUlMenu">
         <ul>
-          <li style="padding:4px 0 0 45px;"><a href="#."  onClick="return showContent('category',{'navcat' : '.accuracyparts'});">Products</a></li>
+          <li style="padding:4px 0 0 45px;"><a href="#."  onClick="return showContent('category',{'navcat' : '.accuracyparts'});">Products</a>
+			  <ul>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.accuracyparts'});">Accuracy Parts</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.accuracyreloading'});">Accuracy Reloading</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubbar10andsr25accuracyandreliabilityparts'});">AR-10 & SR-25 Accuracy & Reliability Parts</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubbar15accuracyandreliabilityparts'});">AR-15 Accuracy & Reliability Parts</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.booksanddvds'});">Books & DVDs</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubbcompetitionandshootingaccessories'});">Competition & Shooting Accessories</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubbcssprings'});">CS Springs</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubbdtacprecisionloadedammunition'});">DTAC Precision Loaded Ammunition</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.dynamictargetingreticledtrscopes'});">Dynamic Targeting Reticle (DTR) Scopes</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.finalfinishandfinalfinishtms'});">Final Finish & TMS</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubbloadedammunition'});">Loaded Ammunition</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubbm1garandandm1acssprings'});">M1 Garand & M1A CS Springs</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubbremington700accuracyparts'});">Remington 700 Accuracy Parts</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubbspeedlockfiringpinsforboltrifles'});">Speedlock Firing Pins for Bolt Rifles</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat': '.tubb2000andspectaclrriflesandaccessories'});">Tubb 2000 & Spec-Tac-LR Rifles</a></li>
+			  </ul>
+		  </li>
+		  
           <li><a href="#." onClick="return showContent('company',{'show':'article'});">Articles</a></li>
           <li><a href="#." onClick="return showContent('company',{'show': 'videos'});">Videos</a></li>
           <li><a href="#." onClick="return showContent('company',{'show':'about'});">About David Tubb</a></li>
           <li><a href="#." onClick="return showContent('company',{'show':'product_info'});">Product Documentation</a></li>
           <li><a href="#." onClick="return showContent('company',{'show':'faq'});">FAQ</a></li>
         </ul>
-        <div id="megamenu1" class="megamenu">
-          <ul>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.accuracyparts'});">Accuracy Parts</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.accuracyreloading'});">Accuracy Reloading</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbar10andsr25accuracyandreliabilityparts'});">AR-10 & SR-25 Accuracy & Reliability Parts</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbar15accuracyandreliabilityparts'});">AR-15 Accuracy & Reliability Parts</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.booksanddvds'});">Books & DVDs</a></li>
-          </ul>
-          <ul>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbcompetitionandshootingaccessories'});">Competition & Shooting Accessories</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbcssprings'});">CS Springs</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbdtacprecisionloadedammunition'});">DTAC Precision Loaded Ammunition</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.dynamictargetingreticledtrscopes'});">Dynamic Targeting Reticle (DTR) Scopes</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.finalfinishandfinalfinishtms'});">Final Finish & TMS</a></li>
-          </ul>
-          <ul style="border-right:none;">
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbloadedammunition'});">Loaded Ammunition</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbm1garandandm1acssprings'});">M1 Garand & M1A CS Springs</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbremington700accuracyparts'});">Remington 700 Accuracy Parts</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubbspeedlockfiringpinsforboltrifles'});">Speedlock Firing Pins for Bolt Rifles</a></li>
-            <li><a href="#" onClick="return showContent('category',{'navcat': '.tubb2000andspectaclrriflesandaccessories'});">Tubb 2000 & Spec-Tac-LR Rifles</a></li>
-          </ul>
-        </div>
       </div>
       <!-- Responsive Menu -->
       <form id="responsive-menu" action="#" method="post">

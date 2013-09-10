@@ -891,7 +891,7 @@ CHECKOUT
 }
 .ddUlMenu li ul {
 	left:-999em;
-	margin:14px 0px 0 -20px; /* top margin should = tier 1 line-height - 1px...ish */
+	margin:19px 0px 0 -20px; /* top margin should = tier 1 line-height - 1px...ish */
 	position:absolute;
 	width:160px;
 	z-index:9999;
@@ -904,7 +904,7 @@ CHECKOUT
 	cursor:pointer;
 } /* click is likely binded to li, so make it all a cursor */
 .ddUlMenu li ul a {
-	background:none;
+	background:#272727;
 	line-height:24px;
 	font-weight:normal;
 	font-size:.8em;
@@ -1266,19 +1266,15 @@ CHECKOUT
 
 /*NEW DROP DWON MENU CSS*/
 .megamenu {
-	position:absolute;
-	display:none;
-	background:#4a4a49;
-	padding:10px;
-	font:normal 12px Verdana;
+	float: left;
+	border: 1px solid #121314;
+	border-top: 1px solid #2b2e30;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	overflow: hidden;
 	z-index:100;
 	width:960px;
-	font-family:Arial, Helvetica, sans-serif;
-	/* box-shadow:1px 1px 1px 1px #333;*/ border-bottom-left-radius:15px;
-	border-bottom-right-radius:15px;
-	border-bottom:2px #333 solid;
-	border-left:#333 2px solid;
-	border-right:#333 2px solid;
 }
 .megamenu ul {
 	margin:0;
