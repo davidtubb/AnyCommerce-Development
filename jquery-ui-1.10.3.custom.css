@@ -1,8 +1,8 @@
-/*! jQuery UI - v1.10.3 - 2013-08-29
+/*! jQuery UI - v1.10.3 - 2013-09-10
 * http://jqueryui.com
-* Includes: 
+* Includes: jquery.ui.theme.css
 * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana%2CArial%2Csans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=%23262626&bgTextureHeader=highlight_soft&bgImgOpacityHeader=45&borderColorHeader=%23606060&fcHeader=%23ffffff&iconColorHeader=%23222222&bgColorContent=%23dddddd&bgTextureContent=flat&bgImgOpacityContent=75&borderColorContent=%23606060&fcContent=%23222222&iconColorContent=%23222222&bgColorDefault=%23606060&bgTextureDefault=highlight_soft&bgImgOpacityDefault=75&borderColorDefault=%23262626&fcDefault=%23ffffff&iconColorDefault=%23262626&bgColorHover=%23a42925&bgTextureHover=highlight_hard&bgImgOpacityHover=45&borderColorHover=%23262626&fcHover=%23ffffff&iconColorHover=%23ffffff&bgColorActive=%23a42925&bgTextureActive=highlight_hard&bgImgOpacityActive=65&borderColorActive=%23262626&fcActive=%23ffffff&iconColorActive=%23ffffff&bgColorHighlight=%23979897&bgTextureHighlight=diagonals_small&bgImgOpacityHighlight=25&borderColorHighlight=%23262626&fcHighlight=%23262626&iconColorHighlight=%23262626&bgColorError=%23fababa&bgTextureError=diagonals_small&bgImgOpacityError=55&borderColorError=%23cd0a0a&fcError=%23cd0a0a&iconColorError=%23cd0a0a&bgColorOverlay=%23606060&bgTextureOverlay=flat&bgImgOpacityOverlay=20&opacityOverlay=65&bgColorShadow=%23520a07&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=60&thicknessShadow=6px&offsetTopShadow=-6px&offsetLeftShadow=-6px&cornerRadiusShadow=8px&zThemeParams=5d000001002706000000000000003d8888d844329a8dfe02723de3e5701fa198449035fc0613ff729a37dd818cf92b1f6938fefa90282d04ae436bb72367f5909357c629e832248af2c086db4ab730aa4cced933a88449eca61db9f7f3b23d47f58a712d809b6088edfb34a807a6111cc2797cca956a89c20c9aadc689f8cc465739b53fa7b4be3a9b37c4e9537e6b48b4cead98682366949275c2de3ad18fd7233f0ff501e6d0ae6ebac29f21e030385d158e5957ac949fd3b7087d16fa824af18b0084a0d9ac97aac306f92488d09f10d14cadb7ae33ada712987458a2fd64141ef6ef014f0b402bb3540edae664ac01f2eb53320a00cb2781a265fa9625f2e8b44576324f79718f328a53157dd75adf225daeca2b6c33f4865efee5c86f46a07aba75f42dc2f10d7da1bb74ae60dca38413822a97e057438cf7d5b3c2ef1091b7ff16c26afee27d493cc98f8ee3bd8fa7fada090defe9f4af03ff6a5ff3da7a2de23a8f6d687da65ad1b1e18701df9658dad8f5ced4d97e3784f7f73f742ddaec370c0b424f6aa9fa741f9d09edc7ebb314d8e1cf9a95654328106987f422f2be398c4f5b54339e9e441c66c56ba4b4761ea7b79fadd3d00449d7a8d462b3b2b60cbdf818864698792d4ff5c7fc8604ac
-* Copyright 2013 jQuery Foundation and other contributors Licensed MIT */
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
 
 
 /* Component containers
@@ -48,6 +48,7 @@
 	background: #606060 url(images/ui-bg_highlight-soft_75_606060_1x100.png) 50% 50% repeat-x;
 	font-weight: normal;
 	color: #ffffff;
+	padding: 7px;
 }
 .ui-state-default a,
 .ui-state-default a:link,
