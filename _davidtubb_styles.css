@@ -2185,6 +2185,7 @@ background: none repeat scroll 0 0 #920505;
 /*****Tabing Section*****/
 
 /*Category Tab Section*/
+.buttonBG {background: url(images/cattabbg.jpg)}
 .cattab {
 	margin:10px 0 0 0;
 	padding:0px;
