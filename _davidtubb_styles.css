@@ -1499,7 +1499,7 @@ img {
 	color:#ffffff;
 }
 .nav ul li a:hover {
-	color:#272626;
+	color:#871101;
 }
 .header select {
 	background:url("images/navselect.gif") no-repeat scroll right center #FFFFFF;
@@ -2193,23 +2193,23 @@ background: none repeat scroll 0 0 #920505;
 	width:100%;
 }
 .cattab .ui-widget-content {
-	background:#FFFFFF !important;
-	border:none !important;
+	background:#ffffff;
+	border:none;
 	margin:0px;
 	padding:0px;
 	text-align:left;
 }
 .cattab .ui-widget-header {
-	background:url(images/cattabbotbg.gif) repeat-x !important;
-	border:none !important;
+	background:url(images/cattabbotbg.gif) repeat-x;
+	border:none;
 	height:24px;
 }
 .cattab .ui-tabs .ui-tabs-nav {
 	margin: 0;
-	padding:0px !important;
+	padding:0px;
 }
 .cattab .ui-state-default {
-	background:url(images/cattaboff.jpg) no-repeat !important;
+	background:url(images/cattaboff.jpg) no-repeat;
 	width:227px;
 	height:24px;
 	font-family:'Aldrich', serif;
@@ -2217,11 +2217,7 @@ background: none repeat scroll 0 0 #920505;
 	text-align:center;
 }
 .cattab .ui-state-active {
-	background:url(images/cattabon.jpg) no-repeat !important;
-	width:227px;
-	height:24px;
-	font-family:'Aldrich', serif;
-	font-size:16px;
+	background:url(images/cattabon.jpg) no-repeat ;
 	text-align:center;
 }
 .cattab .ui-tabs .ui-tabs-nav li {
@@ -2235,9 +2231,9 @@ background: none repeat scroll 0 0 #920505;
 	white-space:nowrap;
 }
 .cattab .ui-state-default a {
-	color:#FFFFFF !important;
+	color:#FFFFFF;
 	text-decoration:none;
-	font-weight:normal !Important;
+	font-weight:normal;
 }
 .cattab .ui-tabs .ui-tabs-nav li a {
 	float:none;

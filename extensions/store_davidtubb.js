@@ -105,7 +105,7 @@ var store_davidtubb = function() {
 						'datapointer' : 'catSearchAscending|'+P.navcat,
 						'callback' : function(rd){
 							if(!app.model.responseHasErrors(rd)){
-								$('.priceList', $context).anycontent({'datapointer':rd.datapointer,'templateID':'priceListTemplate'})
+								$('.priceListAsc', $context).anycontent({'datapointer':rd.datapointer,'templateID':'priceListTemplate'})
 								}
 							else {
 								app.u.throwMessage(rd);
@@ -116,6 +116,39 @@ var store_davidtubb = function() {
 					app.ext.store_search.calls.appPublicProductSearch.init(elasticsearch, _tag, 'immutable');
 					app.model.dispatchThis('immutable');
 				}]);
+				
+								app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
+					var $context = $(app.u.jqSelector('#',P.parentID));
+					var elasticsearch = app.ext.store_search.u.buildElasticRaw({
+						"query" : {
+							"term" : {"app_category" : P.navcat }
+							},
+							"sort" : [
+								{ "base_price" : {"order" : "desc"}}
+							]
+						});
+					var _tag = {
+						'datapointer' : 'catSearchDescending|'+P.navcat,
+						'callback' : function(rd){
+							if(!app.model.responseHasErrors(rd)){
+								$('.priceListDesc', $context).anycontent({'datapointer':rd.datapointer,'templateID':'priceListTemplate'})
+								}
+							else {
+								app.u.throwMessage(rd);
+								}
+							}
+						};
+					
+					app.ext.store_search.calls.appPublicProductSearch.init(elasticsearch, _tag, 'immutable');
+					app.model.dispatchThis('immutable');
+				}]);
+				
+				app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) { 
+					var $context = $(app.u.jqSelector('#',P.parentID));
+					if(!$('#categoryTabs .tabContainer', $context).hasClass('anytabs')){
+						$('#categoryTabs .tabContainer', $context).addClass('anytabs').anytabs();
+						}
+					}]);
 					
 				//if there is any functionality required for this extension to load, put it here. such as a check for async google, the FB object, etc. return false if dependencies are not present. don't check for other extensions.
 				r = true;
