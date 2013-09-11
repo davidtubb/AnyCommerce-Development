@@ -248,15 +248,71 @@ the homepageTemplate template is loaded into mainContentArea by default when the
         </div>
         <p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
       </div>
-      <script>
-$("#tabs").tabs();
-</script>
-      <div class="tabimg">
-        <div id="tabs">
-          <ul>
-            <li style="margin-left:8px; margin-top:2px;"><a href="#tabs-1">Videos</a></li>
-            <li style="margin-top:2px;"><a href="#tabs-2">Articles</a></li>
-          </ul>
+	
+	<div id='homepageTabs' class="tabimg">
+	<!-- This works because of some awesome code in app-quickstart-init.js-->
+		<div id="tabs" class="tabContainer tabconsection">
+			<ul class="alignCenter homepageTabBG">
+				<li><a href='#videos'>Videos</a></li>
+				<li><a href='#articles'>Articles</a></li>
+			</ul>
+			<div id="tabs-1" data-anytab-content='videos'>
+				<div class="tabproduct"><a href="http://www.youtube.com/watch?v=q9IYpwx3-_w" class="video">
+				<p><img src="images/tabpropic1.jpg" /></p>
+				</a>
+				<h1><a href="http://www.youtube.com/watch?v=q9IYpwx3-_w"  class="video">Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb (Promo)</a></h1>
+				</div>
+				<div class="tab_rightbg"><img src="images/tab_rightbg.gif"></div>
+				<div class="tabproduct"><a href="http://www.youtube.com/watch?v=mlA0rS2B2Iw" target="_blank" class="video">
+				<p><img src="images/tabpropic2.jpg" /></p>
+				</a>
+				<h1><a href="http://www.youtube.com/watch?v=mlA0rS2B2Iw" class="video">Tubb Precision AR-15 Performance Parts & Accessories</a></h1>
+				</div>
+				<div class="tab_rightbg"><img src="images/tab_rightbg.gif"></div>
+				<div class="tabproduct"> <a href="http://www.youtube.com/watch?v=DLXc4sK8fOI" target="_blank" class="video">
+				<p><img src="images/tabpropic3.jpg" /></p>
+				</a>
+				<h1><a href="http://www.youtube.com/watch?v=DLXc4sK8fOI" target="_blank" class="video">David Tubb - The Art & Technique of the Modern Match Rifle</a></h1>
+				</div>
+				<div class="tab_rightbg"><img src="images/tab_rightbg.gif"></div>
+				<div class="tabproduct"><a href="http://www.youtube.com/watch?v=sIepYnnYFA8"  class="video">
+				<p><img src="images/tabpropic4.jpg" /></p>
+				</a>
+				<h1><a href="http://www.youtube.com/watch?v=sIepYnnYFA8" class="video">David Tubb Night Shoot with SureFire M962LT WeaponLight</a></h1>
+				</div>
+				<div class="videohere"><a href="#." onClick="return showContent('company',{'show': 'videos'});"><img src="images/videos_here.gif" border="0"></a></div>
+				<div class="cb"></div>
+			</div>
+			<div id="tabs-2" data-anytab-content='articles'>
+				<div class="tabartical">
+				  <h1><a href="pdfs/barrel_break-in_new.pdf">New Barrel Break-In</a></h1>
+				  <h2>Newly updated (February 2012) from previous materials, this brand new article explains David Tubb's beliefs and process for breaking in both factory and handlapped barrels</h2>
+				  <p><a href="pdfs/barrel_break-in_new.pdf">>>Read</a></p>
+				</div>
+				<div class="tabartical_rightbg"><img src="images/tab_rightbg.gif"></div>
+				<div class="tabartical">
+				  <h1><a href="pdfs/2000_concept.pdf">TUBB 2000 Concepts</a></h1>
+				  <h2>This is must reading for anyone interested in the TUBB 2000 rifle or firearms design in general.</h2>
+				  <p><a href="pdfs/2000_concept.pdf">>>Read</a></p>
+				</div>
+				<div class="tabartical_rightbg"><img src="images/tab_rightbg.gif"></div>
+				<div class="tabartical">
+				  <h1><a href="pdfs/tubb_tips_one.pdf">High Power Tips</a></h1>
+				  <h2>Some of David's thoughts on preparation and mistake prevention. It is not too late to use this for Perry this year!</h2>
+				  <p><a href="pdfs/tubb_tips_one.pdf">>>Read</a></p>
+				</div>
+				<div class="tabartical_rightbg"><img src="images/tab_rightbg.gif"></div>
+				<div class="tabartical">
+				  <h1><a href="pdfs/tubbsuccess.pdf">High Power Success</a></h1>
+				  <h2>This article outlines six tenents he has followed throughout his career. As with any and all by David, it's must reading for any serious shooter.</h2>
+				  <p><a href="pdfs/tubbsuccess.pdf">>>Read</a></p>
+				</div>
+				<div class="morearticalv"><a href="#" onClick="return showContent('company',{'show':'article'});"><img src="images/more_articles.gif" border="0"></a></div>
+				<div class="cb"></div>
+			</div>
+		</div>
+	</div>
+	        
           <script type="text/javascript">
 			 jQuery(document).ready(function() {
 
@@ -283,63 +339,7 @@ $("#tabs").tabs();
    	$(".video").animate('slow');
 });
 			 </script>
-          <div id="tabs-1" class="tabconsection">
-            <div class="tabproduct"><a href="http://www.youtube.com/watch?v=q9IYpwx3-_w" class="video">
-              <p><img src="images/tabpropic1.jpg" /></p>
-              </a>
-              <h1><a href="http://www.youtube.com/watch?v=q9IYpwx3-_w"  class="video">Ultimate Varmint! - Baboon Hunting in South Africa with David Tubb (Promo)</a></h1>
-            </div>
-            <div class="tab_rightbg"><img src="images/tab_rightbg.gif"></div>
-            <div class="tabproduct"><a href="http://www.youtube.com/watch?v=mlA0rS2B2Iw" target="_blank"
-class="video">
-              <p><img src="images/tabpropic2.jpg" /></p>
-              </a>
-              <h1><a href="http://www.youtube.com/watch?v=mlA0rS2B2Iw" class="video">Tubb Precision AR-15 Performance Parts & Accessories</a></h1>
-            </div>
-            <div class="tab_rightbg"><img src="images/tab_rightbg.gif"></div>
-            <div class="tabproduct"> <a href="http://www.youtube.com/watch?v=DLXc4sK8fOI" target="_blank" class="video">
-              <p><img src="images/tabpropic3.jpg" /></p>
-              </a>
-              <h1><a href="http://www.youtube.com/watch?v=DLXc4sK8fOI" target="_blank" class="video">David Tubb - The Art & Technique of the Modern Match Rifle</a></h1>
-            </div>
-            <div class="tab_rightbg"><img src="images/tab_rightbg.gif"></div>
-            <div class="tabproduct"><a href="http://www.youtube.com/watch?v=sIepYnnYFA8"  class="video">
-              <p><img src="images/tabpropic4.jpg" /></p>
-              </a>
-              <h1><a href="http://www.youtube.com/watch?v=sIepYnnYFA8" class="video">David Tubb Night Shoot with SureFire M962LT WeaponLight</a></h1>
-            </div>
-            <div class="videohere"><a href="#." onClick="return showContent('company',{'show': 'videos'});"><img src="images/videos_here.gif" border="0"></a></div>
-            <div class="cb"></div>
-          </div>
-          <div id="tabs-2" class="tabconsection">
-            <div class="tabartical">
-              <h1><a href="pdfs/barrel_break-in_new.pdf">New Barrel Break-In</a></h1>
-              <h2>Newly updated (February 2012) from previous materials, this brand new article explains David Tubb's beliefs and process for breaking in both factory and handlapped barrels</h2>
-              <p><a href="pdfs/barrel_break-in_new.pdf">>>Read</a></p>
-            </div>
-            <div class="tabartical_rightbg"><img src="images/tab_rightbg.gif"></div>
-            <div class="tabartical">
-              <h1><a href="pdfs/2000_concept.pdf">TUBB 2000 Concepts</a></h1>
-              <h2>This is must reading for anyone interested in the TUBB 2000 rifle or firearms design in general.</h2>
-              <p><a href="pdfs/2000_concept.pdf">>>Read</a></p>
-            </div>
-            <div class="tabartical_rightbg"><img src="images/tab_rightbg.gif"></div>
-            <div class="tabartical">
-              <h1><a href="pdfs/tubb_tips_one.pdf">High Power Tips</a></h1>
-              <h2>Some of David's thoughts on preparation and mistake prevention. It is not too late to use this for Perry this year!</h2>
-              <p><a href="pdfs/tubb_tips_one.pdf">>>Read</a></p>
-            </div>
-            <div class="tabartical_rightbg"><img src="images/tab_rightbg.gif"></div>
-            <div class="tabartical">
-              <h1><a href="pdfs/tubbsuccess.pdf">High Power Success</a></h1>
-              <h2>This article outlines six tenents he has followed throughout his career. As with any and all by David, it's must reading for any serious shooter.</h2>
-              <p><a href="pdfs/tubbsuccess.pdf">>>Read</a></p>
-            </div>
-            <div class="morearticalv"><a href="#" onClick="return showContent('company',{'show':'article'});"><img src="images/more_articles.gif" border="0"></a></div>
-            <div class="cb"></div>
-          </div>
-        </div>
-      </div>
+  
     </div>
     <!-- a sample of how to get a 'list' src onto the page. -->
     <ul data-bind="var: list($models.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 9;" class='listStyleNone fluidList clearfix noPadOrMargin productList'>
@@ -373,7 +373,7 @@ don't modify the 'data-templateid' unless you are changing template names and up
 	<div id='categoryTabs' class="cattab">
 	<!-- This works because of some awesome code in app-quickstart-init.js-->
 		<div class="tabContainer">
-			<ul class="alignCenter buttonBG">
+			<ul class="alignCenter catTabBG">
 				<li><a href='#bestSeller'>Best Sellers</a></li>
 				<li><a href='#lowHigh'>Price - Low to High</a></li>
 				<li><a href='#highLow'>Price - High to Low</a></li>

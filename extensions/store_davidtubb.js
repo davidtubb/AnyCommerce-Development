@@ -143,6 +143,12 @@ var store_davidtubb = function() {
 					app.model.dispatchThis('immutable');
 				}]);
 				
+				app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) { 
+					if(!$('#homepageTabs .tabContainer').hasClass('anytabs')){
+						$('#homepageTabs .tabContainer').addClass('anytabs').anytabs();
+						}
+					}]);
+					
 				app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) { 
 					var $context = $(app.u.jqSelector('#',P.parentID));
 					if(!$('#categoryTabs .tabContainer', $context).hasClass('anytabs')){

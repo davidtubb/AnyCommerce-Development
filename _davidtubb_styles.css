@@ -2041,6 +2041,7 @@ background: none repeat scroll 0 0 #920505;
 
 
 /*****Tabing Section*****/
+.homepageTabBG {background: url(images/tabbg.jpg)}
 .tabimg {
 	margin:0px;
 	padding:0px;
@@ -2107,7 +2108,6 @@ background: none repeat scroll 0 0 #920505;
 	border-bottom-left-radius: 0px;
 }
 .tabconsection {
-	background:#eedcc1 !important;
 	margin:0 0 0 0;
 	padding:0px;
 	text-align:center;
@@ -2185,7 +2185,7 @@ background: none repeat scroll 0 0 #920505;
 /*****Tabing Section*****/
 
 /*Category Tab Section*/
-.buttonBG {background: url(images/cattabbg.jpg)}
+.catTabBG {background: url(images/cattabbg.jpg)}
 .cattab {
 	margin:10px 0 0 0;
 	padding:0px;
