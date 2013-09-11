@@ -2299,29 +2299,12 @@ background: none repeat scroll 0 0 #920505;
 	width:642px;
 }
 .cattopbannR {
-	margin:20px 0 0 40px;
 	padding:0px;
 	float:left;
 }
-.cattopbannR h1 {
-	margin:5px 0 0 0;
-	padding:0px;
-	color:#010000;
-	font-size:13px;
-	text-align:center;
-	font-family:'MyriadProRegular';
-}
-.cattopbannR h2 {
-	margin:0 0 0 0;
-	padding:0px;
-	color:#010000;
-	font-size:13px;
-	text-align:center;
-	font-family:'MyriadProRegular';
-}
-.cattopbannR h2 span {
-	color:#39b54a;
-}
+.featuredProductContainer {width: 280px; padding: 7px 35px; font-size: 12px; font-weight: bold;}
+.featProdPrice {color:#39B54A;}
+
 .mpControlContainer {
 	display:none;
 }
@@ -2365,9 +2348,6 @@ background: none repeat scroll 0 0 #920505;
 	padding:0;
 	text-align:center;
 	font-weight:normal;
-}
-.borderpic {
-	border:1px solid #CCC;
 }
 /*.feaprobox > li img{height:109px !important; width:164px !important;}
 */
@@ -2535,6 +2515,7 @@ background: none repeat scroll 0 0 #920505;
 	position:relative;
 	width:99% !important;
 }
+.prodThumbContainer { border:1px solid #CCC;}
 .prodSummaryContainer h1 {
 	margin:0px;
 	padding:0 0 10px 0;
