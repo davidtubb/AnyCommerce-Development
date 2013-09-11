@@ -65,31 +65,6 @@ var store_davidtubb = function() {
 					
 					}]);
 				
-				app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
-					var $target=$('#wideSlideshow');
-					if(!$target.hasClass('slideshowSet')){ //target doesn't already have slideshow
-						$target.addClass('slideshowSet').cycle({fx:'fade',speed:'slow',timeout:5000,pager:'#slideshowNav'});	
-						}
-					$('#slideshowNav a').click( function(e){
-						$('#wideSlideshow').cycle('pause');
-						$('#folio-play').show();
-						$('#folio-pause').hide();
-					});
-			 
-					$('#folio-play').hide();
-			 
-					$('#folio-play').click( function(e){
-						$('#wideSlideshow').cycle('resume');
-						$('#folio-play').hide();
-						$('#folio-pause').show();
-					});
-			 
-					$('#folio-pause').click( function(e){
-						$('#wideSlideshow').cycle('pause');
-						$('#folio-play').show();
-						$('#folio-pause').hide();
-					});	
-					}]);
 					
 				app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
 					var $context = $(app.u.jqSelector('#',P.parentID));
