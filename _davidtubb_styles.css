@@ -2230,6 +2230,10 @@ background: none repeat scroll 0 0 #920505;
 	position:relative;
 	top:0;
 	white-space:nowrap;
+	background: url("images/cattaboff.jpg") no-repeat scroll 0 0 transparent;
+}
+.cattab .ui-tabs .ui-tabs-nav li.ui-tabs-active{
+	background: url("images/cattabon.jpg") no-repeat scroll 0 0 transparent;
 }
 .cattab .ui-state-default a {
 	color:#FFFFFF;

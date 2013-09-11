@@ -632,6 +632,9 @@ NOTES
 						else	{
 							$parent.dialog( "option", "title", app.data["appProductGet|"+P.pid]['%attribs']['zoovy:prod_name'] );
 							$parent.anycontent({'templateID':P.templateID,'datapointer':"appProductGet|"+P.pid});
+							if(!$('.quickviewTabs .tabContainer', $parent).hasClass('anytabs')){
+								$('.quickviewTabs .tabContainer', $parent).addClass('anytabs').anytabs();
+								}
 							}
 						}});
 					app.ext.store_product.calls.appReviewsList.init(P.pid); //

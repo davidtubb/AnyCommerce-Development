@@ -625,28 +625,33 @@ It's done this way because ID's hard coded into template are bad mojo (templates
             <span class='savings'> <span class='savingsDifference' data-bind='var: product(pid); format:priceRetailSavingsDifference; extension:myRIA; pretext: You save: ;'></span> <span class='savingsPercentage' data-bind='var: product(pid); format:priceRetailSavingsPercentage; extension:myRIA; pretext: (; posttext:);'></span> </span> </div>
           <div data-bind='var: product(zoovy:ship_latency); format:text;pretext:Normally ships in ;posttext: day(s);' class='latency'></div>
           <section class='marginBottom'> <span data-bind='var: reviews(reviews.average); format:addClass; className:review_;' class='reviewSprite'></span> <span data-bind='var: reviews(reviews.total); format:text;posttext: from ;posttext: reviews; className:numReviews;'></span> </section>
-          <script>
-$("#tabs2").tabs();
-</script>
-          <div class="cattab">
-            <div id="tabs2">
-              <ul>
-                <li style="margin-left:8px;"><a href="#tabs-7">Description</a></li>
-                <li><a href="#tabs-8">Specs</a></li>
-                <li><a href="#tabs-9">Features</a></li>
-              </ul>
-              <div id="tabs-7" class="tabconsection">
-                <div data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;'></div>
-              </div>
-              <div id="tabs-8" class="tabconsection">
-                <div data-bind='var: product(zoovy:prod_detail); format:wiki; wikiFormats:myRIA;'></div>
-              </div>
-              <div id="tabs-9" class="tabconsection">
-                <div data-bind='var: product(zoovy:prod_features); format:wiki; wikiFormats:myRIA;'></div>
-              </div>
-            </div>
-          </div></td>
-      </tr>
+          <form data-bind='var: product(pid); format:atcForm; extension:store_product;' class='prodViewerAddToCartForm clearfix' action='#' onSubmit="app.ext.myRIA.u.addItemToCart($(this), {'action':'modal'}); return false;">
+              <fieldset data-bind='var: product(pid); format:atcVariations; extension:store_product;' class='borderNone'>
+              </fieldset>
+              <fieldset data-bind='useParentData:true; format:atcQuantityInput; extension:store_product; pretext:Quantity: ; defaultValue:1;' class='borderNone'>
+              </fieldset>
+              <input type='submit' value='Add to Cart' class='ui-button ui-button-text ui-corner-all ui-state-default addToCartButton displayNone' data-bind='var: product(pid); format:addToCartButton; extension:store_product;'  />
+            </form>
+		<div class="cattab quickviewTabs">
+		<!-- This works because of some awesome code in store_product.js-->
+			<div class="tabContainer tabs2">
+				<ul class="alignCenter catTabBG">
+					<li><a href='#prodDescQuickview'>Description</a></li>
+					<li class="displayNone" data-bind='var: product(zoovy:prod_detail); format:showIfSet;'><a href='#prodSpecsQuickview'>Specs</a></li>
+					<li class="displayNone" data-bind='var: product(zoovy:prod_features); format:showIfSet;'><a href='#prodFeaturesQuickview'>Features</a></li>
+				</ul>
+				<div data-anytab-content='prodDescQuickview'>
+					<div data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;'></div>
+				</div>
+				<div data-anytab-content='prodSpecsQuickview'>
+					<div data-bind='var: product(zoovy:prod_detail); format:wiki; wikiFormats:myRIA;'></div>
+				</div>
+				<div data-anytab-content='prodFeaturesQuickview'>
+					<div data-bind='var: product(zoovy:prod_features); format:wiki; wikiFormats:myRIA;'></div>
+				</div>
+			</div>
+		</div>
+		  
       <tr>
         <td colspan='2'><ul class='listStyleNone clearfix productReviewsList'  data-bind="var: reviews(reviews.@reviews); format:processList; loadsTemplate:productReviewsTemplateDetail;">
           </ul></td>
