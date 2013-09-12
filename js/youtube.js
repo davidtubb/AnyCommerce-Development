@@ -126,11 +126,3 @@ return videoLoadID;
 function getStarRatingWidth(ratingVal) {
 return (Math.round((ratingVal / 5) * 70));
 }
-function initializeScollbar() {
-$('#video_list').tinyscrollbar({
-axis: 'y',
-wheel: 231,
-size: 439,
-sizeThumb: 144
-});
-}
