@@ -71,7 +71,6 @@ function renderVideoArray() {
 // Populate video list
 $('#video_list_inner').html(divContent);
 // Render custom scrollbar
-initializeScollbar();
 // Populate default video
 var url_hash = location.hash.replace('#','');
 var autoplay_enabled = false;

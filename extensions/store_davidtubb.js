@@ -41,30 +41,34 @@ var store_davidtubb = function() {
 				
 				app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
 					var $context = $(app.u.jqSelector('#',P.parentID));
-					var featProd = app.ext.store_davidtubb.vars.featuredProdMap[P.navcat];
-					if(featProd){
-						
-						}
-					else {
-						//No featured product assigned to this category... default behavior?
-						featProd = "BNC";
-						}
-					var tagObj = {
-						'callback' : function(rd){
-							if(!app.model.responseHasErrors(rd)){
-								$('.featuredProductContainer', $context).anycontent({'datapointer':'appProductGet|'+featProd,'templateID':'featuredProductTemplate'});
-					
-								}
-							else {
-								app.u.throwMessage(rd);
+					if(!$('.featuredProductContainer', $context).hasClass('featProdRendered')){
+						var featProd = app.ext.store_davidtubb.vars.featuredProdMap[P.navcat];
+						if(featProd){
+							
+							}
+						else {
+							//No featured product assigned to this category... default behavior?
+							featProd = "BNC";
+							}
+						var tagObj = {
+							'callback' : function(rd){
+								if(!app.model.responseHasErrors(rd)){
+									$('.featuredProductContainer', $context).anycontent({'datapointer':'appProductGet|'+featProd,'templateID':'featuredProductTemplate'});		
+									}
+								else {
+									app.u.throwMessage(rd);
+									}
 								}
 							}
-					}	
+						app.ext.store_product.calls.appProductGet.init(featProd,tagObj,'immutable');
+						}	
+					else{
+						// already rendered
+						}
 					
-					app.ext.store_product.calls.appProductGet.init(featProd,tagObj,'immutable');
 					
 					}]);
-				
+			
 					
 				app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
 					var $context = $(app.u.jqSelector('#',P.parentID));
