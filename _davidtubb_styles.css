@@ -2302,8 +2302,17 @@ background: none repeat scroll 0 0 #920505;
 	padding:0px;
 	float:left;
 }
-.featuredProductContainer {width: 280px; padding: 7px 35px; font-size: 12px; font-weight: bold;}
-.featProdPrice {color:#39B54A;}
+.featuredProductContainer {
+	width: 280px; 
+	padding: 7px 35px; 
+	font-size: 12px; 
+	font-weight: bold; 
+	text-align: center;
+}
+.featuredImage{position:relative;}
+.featuredBanner{position: absolute; top: 0; left: 0;}
+.featuredProdImg {border: 1px solid #CCCCCC; margin: 4px;}
+.featProdPrice {color:#39B54A; padding-left: 4px;}
 
 .mpControlContainer {
 	display:none;
