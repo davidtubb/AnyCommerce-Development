@@ -886,7 +886,7 @@ CHECKOUT
 .ddUlMenu ul li a {
 	float:left;
 	text-decoration:none;
-	padding:0 12px;
+	padding:0 30px;
 	cursor:pointer;
 }
 .ddUlMenu li ul {
@@ -907,10 +907,14 @@ CHECKOUT
 	background:#272727;
 	line-height:24px;
 	font-weight:normal;
-	font-size:.8em;
+	font-size:14px;
 	display:block;
 	border:0 none;
-	width:160px;
+	width:315px;
+	padding: 5px 20px;
+}
+.nav.ddUlMenu li {
+    height: 30px;
 }
 .debug {
 	position:fixed;
@@ -1491,7 +1495,7 @@ img {
 }
 .nav ul li {
 	margin:0px;
-	padding:4px 0 0 67px;
+	padding:4px 0 0 10px;
 	list-style-type:none;
 	float:left;
 }
@@ -1499,7 +1503,7 @@ img {
 	color:#ffffff;
 }
 .nav ul li a:hover {
-	color:#871101;
+	color:#dddddd;
 }
 .header select {
 	background:url("images/navselect.gif") no-repeat scroll right center #FFFFFF;
