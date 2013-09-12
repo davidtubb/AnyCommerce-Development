@@ -53,7 +53,7 @@ var store_davidtubb = function() {
 						var tagObj = {
 							'callback' : function(rd){
 								if(!app.model.responseHasErrors(rd)){
-									$('.featuredProductContainer', $context).anycontent({'datapointer':'appProductGet|'+featProd,'templateID':'featuredProductTemplate'});		
+									$('.featuredProductContainer', $context).addClass('featProdRendered').anycontent({'datapointer':'appProductGet|'+featProd,'templateID':'featuredProductTemplate'});		
 									}
 								else {
 									app.u.throwMessage(rd);
