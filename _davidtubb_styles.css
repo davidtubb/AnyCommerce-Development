@@ -314,9 +314,14 @@ and override using classes or id's as needed.
 	display:inline-block;
 }
 .quickView {
+	background: none repeat scroll 0 0 #8E8E8E;
+    border: 1px solid #5C5C5C;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+	padding:2px;
 	position:absolute;
-	top:41px;
-	right:45px;
+	top:6px;
+	right:6px;
 	z-index:1001;
 } /* jqui modal has zindex 1002 */
 /* over rides - height and width ensure each row is the same height. percentages could be used for width */
@@ -2268,12 +2273,6 @@ background: none repeat scroll 0 0 #920505;
 }
 .cattab button.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
 	border-bottom-left-radius:4px;
-}
-.cattab .quickView {
-	position: absolute;
-	right: 82px !important;
-	top: 41px;
-	z-index: 1001;
 }
 .cattab .feaprobox > li {
 	border:none;
