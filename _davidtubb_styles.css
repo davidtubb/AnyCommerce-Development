@@ -218,7 +218,6 @@ and offMenu is toggle off, hiding the change button.
 } /* used in app messaging for warnings, alerts, successes, etc */
 .zMessage {
 	margin:6px;
-0
 }
 .appMessage {
 	margin-bottom:12px;
@@ -409,6 +408,27 @@ PRODUCT DETAIL PAGE (productTemplate)
 	margin-bottom:8px;
 	padding-bottom:8px;
 	border-bottom:1px dotted #b6b6b6;
+}
+
+.tabs.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix {
+    background: url("images/bg-prodpage.png") repeat scroll 0 0 transparent;
+}
+.prodTabs.ui-tabs .ui-tabs-nav li a { float: none; }
+.prodTabs .ui-state-default.ui-corner-top.ui-state-default {
+    background: url("images/button-prodpage-off.png")no-repeat;
+    height: 24px;
+    width: 200px;
+	border: none;
+	margin: 0px;
+}
+.prodTabs .ui-state-default.ui-corner-top.ui-state-active.ui-tabs-active {
+    background: url("images/button-prodpage-on.png") no-repeat;
+}
+.prodTabs .ui-state-default.ui-corner-top.ui-state-default a {
+	padding:1px 30px;
+	text-decoration:none;
+	font-family: 'Aldrich',serif;
+	font-size: 14px;
 }
 /* primary image and thumbnails */
 
@@ -2544,12 +2564,6 @@ background: none repeat scroll 0 0 #920505;
 }
 .prodThumbs img {
 	border:1px solid #dddddd;
-}
-.prodTabs .ui-tabs-nav li a {
-	float:left;
-	padding:5px 63px 4px 63px !important;
-	text-decoration:none;
-	font-weight:normal;
 }
 .cusfidinp {
 	border:1px solid #CCCCCC;
