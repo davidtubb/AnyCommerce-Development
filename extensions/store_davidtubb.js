@@ -145,7 +145,8 @@ var store_davidtubb = function() {
 					var $context = $(app.u.jqSelector('#',P.parentID));
 					
 					$('#wideSlideshow', $context).cycle({
-						pause:  1
+						pause:  1,
+						pager:  '#slideshowNav'
 					});
 					}]);	
 					
