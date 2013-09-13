@@ -72,54 +72,59 @@ var store_davidtubb = function() {
 					
 				app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
 					var $context = $(app.u.jqSelector('#',P.parentID));
-					var elasticsearch = app.ext.store_search.u.buildElasticRaw({
-						"query" : {
-							"term" : {"app_category" : P.navcat }
-							},
-							"sort" : [
-								{ "base_price" : {"order" : "asc"}}
-							]
-						});
-					var _tag = {
-						'datapointer' : 'catSearchAscending|'+P.navcat,
-						'callback' : function(rd){
-							if(!app.model.responseHasErrors(rd)){
-								$('.priceListAsc', $context).anycontent({'datapointer':rd.datapointer,'templateID':'priceListTemplate'})
+					if(!$('.priceListAsc', $context).hasClass('prodsAdded')){
+						var elasticsearch = app.ext.store_search.u.buildElasticRaw({
+							"query" : {
+								"term" : {"app_category" : P.navcat }
+								},
+								"sort" : [
+									{ "base_price" : {"order" : "asc"}}
+								]
+							});
+						var _tag = {
+							'datapointer' : 'catSearchAscending|'+P.navcat,
+							'callback' : function(rd){
+								if(!app.model.responseHasErrors(rd)){
+									$('.priceListAsc', $context).addClass('prodsAdded').anycontent({'datapointer':rd.datapointer,'templateID':'priceListTemplate'})
+									}
+								else {
+									app.u.throwMessage(rd);
+									}
 								}
-							else {
-								app.u.throwMessage(rd);
-								}
-							}
-						};
-					
-					app.ext.store_search.calls.appPublicProductSearch.init(elasticsearch, _tag, 'immutable');
-					app.model.dispatchThis('immutable');
+							};
+						
+						app.ext.store_search.calls.appPublicProductSearch.init(elasticsearch, _tag, 'immutable');
+						app.model.dispatchThis('immutable');
+					}
 				}]);
 				
-								app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
+				app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
 					var $context = $(app.u.jqSelector('#',P.parentID));
-					var elasticsearch = app.ext.store_search.u.buildElasticRaw({
-						"query" : {
-							"term" : {"app_category" : P.navcat }
-							},
-							"sort" : [
-								{ "base_price" : {"order" : "desc"}}
-							]
-						});
-					var _tag = {
-						'datapointer' : 'catSearchDescending|'+P.navcat,
-						'callback' : function(rd){
-							if(!app.model.responseHasErrors(rd)){
-								$('.priceListDesc', $context).anycontent({'datapointer':rd.datapointer,'templateID':'priceListTemplate'})
+					if(!$('.priceListDesc', $context).hasClass('prodsAdded')){
+						
+						var elasticsearch = app.ext.store_search.u.buildElasticRaw({
+							"query" : {
+								"term" : {"app_category" : P.navcat }
+								},
+								"sort" : [
+									{ "base_price" : {"order" : "desc"}}
+								]
+							});
+						var _tag = {
+							'datapointer' : 'catSearchDescending|'+P.navcat,
+							'callback' : function(rd){
+								if(!app.model.responseHasErrors(rd)){
+									$('.priceListDesc', $context).addClass('prodsAdded').anycontent({'datapointer':rd.datapointer,'templateID':'priceListTemplate'})
+									}
+								else {
+									app.u.throwMessage(rd);
+									}
 								}
-							else {
-								app.u.throwMessage(rd);
-								}
-							}
-						};
-					
-					app.ext.store_search.calls.appPublicProductSearch.init(elasticsearch, _tag, 'immutable');
-					app.model.dispatchThis('immutable');
+							};
+						
+						app.ext.store_search.calls.appPublicProductSearch.init(elasticsearch, _tag, 'immutable');
+						app.model.dispatchThis('immutable');
+					}
 				}]);
 				
 				app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) { 
