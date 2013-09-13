@@ -143,11 +143,15 @@ var store_davidtubb = function() {
 				app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 					//run slideshow code
 					var $context = $(app.u.jqSelector('#',P.parentID));
-					
-					$('#wideSlideshow', $context).cycle({
-						pause:  1,
-						pager:  '#slideshowNav'
-					});
+					if (!$('#wideSlideshow', $context).hasClass('slideshowSet')){
+						$('#wideSlideshow', $context).addClass('slideshowSet').cycle({
+							pause:  1,
+							pager:  '#slideshowNav'
+						});
+					}
+					else {
+						//already  rendered
+					}
 					}]);	
 					
 				//if there is any functionality required for this extension to load, put it here. such as a check for async google, the FB object, etc. return false if dependencies are not present. don't check for other extensions.
