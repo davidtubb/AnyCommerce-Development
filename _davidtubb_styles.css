@@ -331,10 +331,7 @@ and override using classes or id's as needed.
 } /* jqui modal has zindex 1002 */
 .quickView:hover {background: url(images/button-quickview-on.jpg);}
 /* over rides - height and width ensure each row is the same height. percentages could be used for width */
-.productList > li {
-	width:150px;
-	position:relative;
-}
+
 .lineItemProdlist > li {
 	position:relative;
 	display:block;
