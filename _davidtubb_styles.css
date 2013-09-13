@@ -319,7 +319,7 @@ and override using classes or id's as needed.
 	display:inline-block;
 }
 .quickView {
-	background: none repeat scroll 0 0 #8E8E8E;
+	background: url(images/button-quickview-off.jpg);
     border: 1px solid #5C5C5C;
     border-radius: 4px 4px 4px 4px;
     color: #FFFFFF;
@@ -329,6 +329,7 @@ and override using classes or id's as needed.
 	right:6px;
 	z-index:1001;
 } /* jqui modal has zindex 1002 */
+.quickView:hover {background: url(images/button-quickview-on.jpg);}
 /* over rides - height and width ensure each row is the same height. percentages could be used for width */
 .productList > li {
 	width:150px;
