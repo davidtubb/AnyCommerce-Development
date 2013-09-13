@@ -2276,8 +2276,7 @@ background: none repeat scroll 0 0 #920505;
 }
 .cattab .feaprobox > li {
 	border:none;
-	min-height:225px !important;
-	padding:10px;
+	height:225px;
 	max-width:225px;
 	width:100%;
 	background:#FFF;
@@ -2320,6 +2319,10 @@ background: none repeat scroll 0 0 #920505;
 .mpControlContainer {
 	display:none;
 }
+
+.cattab .feaprobox > li h5 {color:#000000; text-decoration: none; font-weight: bold;}
+.cattab .feaprobox > li h6 {font-size: 15px;}
+.cattab .feaprobox> li .price {color: #39b54a;}
 /*Category Page Css*/
 
 
@@ -2336,11 +2339,11 @@ background: none repeat scroll 0 0 #920505;
 }
 .feaprobox > li {
 	margin:0 0 0 36px;
-	padding:0px !important;
+	padding:0px;
 	max-width:164px;
 	width:100%;
 	text-align:center;
-	background:none !important;
+	background:none;
 }
 .feaprobox > li > form button {
 	margin-top:20px;
