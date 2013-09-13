@@ -233,16 +233,15 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 -->
   <div id='homepageTemplate' class='homeTemplate'>
     <div class="middle">
-      <div class="banner">
-        <div id="slideshowContainer" class="clearfix marginBottom">
-          <div id="slideshowNav"></div>
-          <ul id="wideSlideshow" class="pics slideshow">
-            <li><img src="images/banner.jpg" alt=""/></li>
-            <li><img src="images/tubb.png" alt=""></li>
-            <li><img src="images/model52.png" alt=""></li>
-          </ul>
-        </div>
-      </div>
+		<div class="banner">
+			<div id="slideshowContainer" class="clearfix marginBottom">
+				<ul id="wideSlideshow" class="pics slideshow">
+					<li><img src="images/banner.jpg" alt=""/></li>
+					<li><img src="images/tubb.png" alt=""></li>
+					<li><img src="images/model52.png" alt=""></li>
+				</ul>
+			</div>
+		</div>
       <div class="riflesbox"><a href="#" onClick="return showContent('category',{'navcat' : '.tubb2000andspectaclrriflesandaccessories'});"><img src="images/riflespic1.jpg" alt="" class="riflespic" border="0" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.tubbar15accuracyandreliabilityparts'});"><img src="images/riflespic2.jpg" alt="" border="0" class="riflespic" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.accuracyparts'});"><img src="images/riflespic3.jpg" alt="" border="0" class="riflespic" /></a><a href="#" onClick="return showContent('category',{'navcat' : '.'});"><img src="images/riflespic4.jpg" alt="" border="0" class="riflespic" /></a></div>
       <div class="featuredpro">
         <div class="featuredtitle">FEATURED PRODUCTS</div>
@@ -380,7 +379,7 @@ don't modify the 'data-templateid' unless you are changing template names and up
 				<li><a href='#highLow'>Price - High to Low</a></li>
 			</ul>
 			<div id="tabs-4" data-anytab-content='bestSeller'>
-				<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 9;" class='listStyleNone fluidList clearfix feaprobox productList'></ul>
+				<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1;" class='listStyleNone fluidList clearfix feaprobox productList'></ul>
 			</div>
 			<div id="tabs-5" data-anytab-content='lowHigh'>
 				<div class="priceListAsc"></div>
