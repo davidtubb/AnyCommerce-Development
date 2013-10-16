@@ -369,7 +369,10 @@ don't modify the 'data-templateid' unless you are changing template names and up
     </ul>
 	<div class="cattopbann">
 		<div class="cattopbannL">
-			<img src="images/catbannerbg.jpg" />
+			<span data-bind="var:category(%page.banner); format: hideIfSet;">
+				<img src="images/catbannerbg.jpg" />
+			</span>
+			<img src="blank.gif" height="220" width="642" data-bind="var:category(%page.banner); format:imageURL;" />
 			<h2 data-bind='var:category(pretty); format:catText; extension:myRIA; pretext: Tubb&trade; ;'></h2>
 		</div>
 		<div class="cattopbannR">
