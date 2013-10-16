@@ -2312,21 +2312,23 @@ background: none repeat scroll 0 0 #920505;
 .cattopbannL {
 	margin:6px 0 0 7px;
 	padding:0px;
-	float:left;
 	width:642px;
 	height: 220px;
-	background: url(images/catbannerbg.jpg);
+	position: absolute;
 }
 .cattopbannL h2 {
 	font-size: 3em;
 	color: white;
 	text-shadow: 0px 3px 0px black;
 	font-family: 'Aldrich', sans-serif;
+	position: absolute;
+	top:0px;
+	left: 5px;
 }
 
 .cattopbannR {
 	padding:0px;
-	float:left;
+	float:right;
 }
 .featuredProductContainer {
 	width: 280px; 
