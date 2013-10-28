@@ -1555,10 +1555,14 @@ img {
 	margin:6px 0 0 0;
 	padding:0px;
 	float:left;
+	height: 300px;
+	width: 1000px;
+	overflow:hidden;
 }
 .banner img {
 	width:100%;
 }
+#homepageVideo {background: #000000;}
 .riflesbox {
 	margin:15px 0 0 0;
 	padding:0px;

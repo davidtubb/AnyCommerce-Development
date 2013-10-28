@@ -140,20 +140,33 @@ var store_davidtubb = function() {
 						}
 					}]);
 					
-				app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
-					//run slideshow code
+					
+				
+				app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) { 
 					var $context = $(app.u.jqSelector('#',P.parentID));
-					if (!$('#wideSlideshow', $context).hasClass('slideshowSet')){
-						$('#wideSlideshow', $context).addClass('slideshowSet').cycle({
-							pause:  1,
-							pager:  '#slideshowNav'
-						});
-					}
+					if (!$('#homepageVideo', $context).hasClass('videoPlayed')){
+						$('#homepageVideo', $context).addClass('videoPlayed');
+						$('#homepageVideo', $context).html('<iframe width="533" height="300" src="https://www.youtube.com/embed/BhZgxNnsiYU?autoplay=1&modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>');						
+						//set timeout
+						setTimeout(function(){
+							//hide video
+							$('#homepageVideo', $context).fadeOut("slow").hide().empty();
+							//start slideshow
+							if (!$('#wideSlideshow', $context).hasClass('slideshowSet')){
+								$('#wideSlideshow', $context).addClass('slideshowSet').cycle({
+									pause:  1,
+									pager:  '#slideshowNav'
+								});
+								}
+							else {
+								//already  rendered
+								}
+							},11000);
+						}
 					else {
 						//already  rendered
 					}
 					}]);	
-					
 				//if there is any functionality required for this extension to load, put it here. such as a check for async google, the FB object, etc. return false if dependencies are not present. don't check for other extensions.
 				r = true;
 
