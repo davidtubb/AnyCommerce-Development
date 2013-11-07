@@ -646,7 +646,7 @@ It's done this way because ID's hard coded into template are bad mojo (templates
       <tr>
         <td class='imageContainer'><div>
             <div data-bind="var: product(zoovy:prod_is_tags); format:addTagSpans;" class='tagsContainer'></div>
-            <div data-bind='var:product(pid); format:addPicSlider; extension:myRIA;'><img src='blank.gif' class='prodBigImage' alt='' data-bind='var: product(zoovy:prod_image1); format:imageURL;' width='350' /></div>
+            <img src='blank.gif' class='prodBigImage' alt='' data-bind='var: product(zoovy:prod_image1); format:imageURL;' width='350' />
           </div></td>
         <td class='prodSummaryContainer marginBottom no_underline'><h1 data-bind='var: product(zoovy:prod_name); format:text;'></h1>
           <h6 class='ztable_row_small stid' data-bind='var: product(pid); format:text; className: stid; pretext: Sku#: ;' style="font-size:12px;"></h6>
