@@ -1579,6 +1579,18 @@ img {
 .riflesbox img {
 	border:1px solid #000000 !important;
 }
+.bargainTubb {
+    background: none repeat scroll 0 0 #A42924;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: 'Aldrich',serif;
+    font-size: 30px;
+    height: 92px;
+    padding: 20px 0px 0px;
+    text-align: center;
+    width: 225px;
+	border: 1px solid #000000;
+}
 .featuredpro {
 	margin:25px 0 0 0;
 	padding:0px;
