@@ -7,5 +7,46 @@
 	},	
 	".tubbspeedlockfiringpinsforboltrifles":{
 		"banner" : "catimages/firingpincat.jpg"
-	}	
+	},	
+
+	".tubbcssprings":{
+		"banner" : "catimages/springscat.jpg"
+	},	
+
+	".accuracyparts":{
+		"banner" : "catimages/accpartcat.jpg"
+	},	
+	".tubbar15accuracyandreliabilityparts":{
+		"banner" : "catimages/ar15cat.jpg"
+	},	
+	".tubbcompetitionandshootingaccessories":{
+		"banner" : "catimages/compshootcat.jpg"
+	},	
+	".finalfinishandfinalfinishtms":{
+		"banner" : "catimages/ffcat.jpg"
+	},	
+
+	".accuracyreloading":{
+		"banner" : "catimages/accreloadcat.jpg"
+	},	
+	".dynamictargetingreticledtrscopes":{
+		"banner" : "catimages/dtrcat.jpg"
+	},	
+	".tubbremington700accuracyparts":{
+		"banner" : "catimages/rembrake.jpg"
+	},	
+
+	".tubbar10andsr25accuracyandreliabilityparts":{
+		"banner" : "catimages/ar15cat.jpg"
+	},	
+	".tubbdtacprecisionloadedammunition":{
+		"banner" : "catimages/ammocat.jpg"
+	},	
+	".tubbloadedammunition":{
+		"banner" : "catimages/ammocat.jpg"
+	},	
+	".tubbm1garandandm1acssprings":{
+		"banner" : "catimages/m1springs.jpg"
+	}
+	
 }
