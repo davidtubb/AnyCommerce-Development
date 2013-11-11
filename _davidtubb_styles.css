@@ -863,7 +863,11 @@ CART
 CHECKOUT
 
 ***************************************************/
-
+#checkoutContainer {
+	width: 100%;
+	float:left;
+	padding-top: 10px;
+}
 #paybySupplemental_CREDIT .ui-icon-help {
 	display:inline-block;
 	margin-left:6px;

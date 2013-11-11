@@ -24,7 +24,7 @@ var app = {vars:{
 	"release":"20131107151900",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"_clientid":"zmvc",
 	"baseURL":"", //used in non-local mode.
-	"checkoutAuthMode" : "required",//can be passive, active or required
+	"checkoutAuthMode" : "passive",//can be passive, active or required
 	"testURL":"http://www.64ad9ac.crackle.zoovy.net/" //used ONLY if protocol is file: (for testing)
 	},u:{},rq:[]};
 
@@ -112,7 +112,7 @@ app.u.loadScript(app.vars.baseURL+"app-quickstart-init.js");
               <input type="image" src="images/search.gif" class="searchbut" alt="Search" title="Search" />
             </form>
           </div>
-        </div>
+        </div>S
       </div>
       <div class="nav ddUlMenu">
         <ul>
